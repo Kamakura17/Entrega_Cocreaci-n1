@@ -1,0 +1,216 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.4167, 5.4167]
+      },
+      "properties": {
+        "name": "Páramo de Rabanal",
+        "description": "Área protegida en el departamento de Boyacá con gran diversidad de flora y fauna endémica.",
+        "category": "Área Protegida",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.0721, 4.7109]
+      },
+      "properties": {
+        "name": "Eco-ruta de Monserrate",
+        "description": "Ruta ecológica en Bogotá que ofrece una vista panorámica de la ciudad y biodiversidad única.",
+        "category": "Ruta de Senderismo",
+        "color": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-73.8824, 5.5293],
+            [-73.8893, 5.5293],
+            [-73.8893, 5.5353],
+            [-73.8824, 5.5353],
+            [-73.8824, 5.5293]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Reserva Natural SFF Iguaque",
+        "description": "Área protegida conocida por la variedad de especies de fauna y flora en la región de Boyacá.",
+        "category": "Área Protegida",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-73.9733, 4.5281],
+            [-73.9753, 4.5281],
+            [-73.9753, 4.5301],
+            [-73.9733, 4.5301],
+            [-73.9733, 4.5281]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Reserva Natural Chingaza",
+        "description": "Parque natural nacional en Cundinamarca, hogar de numerosas especies animales y vegetales.",
+        "category": "Área Protegida",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.1354, 5.0278]
+      },
+      "properties": {
+        "name": "Santuario de Fauna y Flora Otún Quimbaya",
+        "description": "Área protegida en Boyacá famosa por su biodiversidad y senderos ecológicos.",
+        "category": "Área Protegida",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-74.1304, 4.5981],
+          [-74.0903, 4.6474]
+        ]
+      },
+      "properties": {
+        "name": "Cicloruta Bogotá - Chía",
+        "description": "Eco-ruta que conecta Bogotá con el municipio de Chía, ideal para ciclismo y observación de aves.",
+        "category": "Ruta de Senderismo",
+        "color": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.2800, 4.6782]
+      },
+      "properties": {
+        "name": "Parque Nacional Natural Sumapaz",
+        "description": "Área protegida en Cundinamarca, conocido como el páramo más grande del mundo.",
+        "category": "Área Protegida",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.2214, 4.6960]
+      },
+      "properties": {
+        "name": "Eco-ruta del Lago de Tota",
+        "description": "Ruta ecológica que rodea el Lago de Tota, el lago más grande de Colombia, ubicado en Boyacá.",
+        "category": "Ruta de Senderismo",
+        "color": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-74.0329, 4.6188],
+            [-74.0224, 4.6299],
+            [-74.0190, 4.6217],
+            [-74.0329, 4.6188]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Reserva Forestal Thomas van der Hammen",
+        "description": "Reserva forestal en Cundinamarca que protege importantes ecosistemas de bosque andino.",
+        "category": "Área Protegida",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-73.7280, 5.3486],
+            [-73.7370, 5.3486],
+            [-73.7370, 5.3586],
+            [-73.7280, 5.3586],
+            [-73.7280, 5.3486]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Parque Nacional Natural El Cocuy",
+        "description": "Una de las áreas protegidas más importantes de Boyacá, conocida por sus picos nevados y biodiversidad.",
+        "category": "Área Protegida",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-73.5822, 4.9826],
+            [-73.5902, 4.9826],
+            [-73.5902, 4.9926],
+            [-73.5822, 4.9926],
+            [-73.5822, 4.9826]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Parque Natural Regional Laguna de Tota:",
+        "description": "Área protegida en Boyacá centrada en la conservación del lago de Tota y su biodiversidad.",
+        "category": "Área Protegida",
+        "color": "green"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.0511, 4.7110]
+      },
+      "properties": {
+        "name": "Distribución de especies en Bogotá",
+        "description": "Área con alta concentración de especies de flora y fauna urbana.",
+        "category": "Distribución de Especies",
+        "color": "red"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.5946, 5.5378]
+      },
+      "properties": {
+        "name": "Distribución de especies en Villa de Leyva",
+        "description": "Región con alta concentración de especies endémicas de flora y fauna.",
+        "category": "Distribución de Especies",
+        "color": "red"
+      }
+    }
+  ]
+}
