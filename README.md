@@ -33,8 +33,10 @@ Sigue estos pasos para configurar tu entorno y clonar el repositorio:
 3. Instalar librerias de flask y request en python:
    ```bash
    pip install flask requests
-4. Para entrega Fase II, se añaden las APIs de Clima y de Observación de aves.
-5. Para que funcione el API de clima se debe ejecutar el app.py se debe ejecutar esta se ejecutara en http://localhost:5000.
-6. Para que funcione el API de Observación de aves se debe ejecutar el app.py se debe ejecutar esta se ejecutara en http://localhost:5010.
-7. Adicional se encuentra el documento .pdf donde se encuentra el mockup de la aplicación mas las versiones de python y las bibliotecas utilizadas para el desarrollo de la Aplicación.
+
+## Ejecución del Código
+1. Para entrega Fase II, se añaden las APIs de Clima y de Observación de aves.
+2. Para que funcione el API de clima se debe ejecutar el app.py se debe ejecutar esta se ejecutara en http://localhost:5000.
+3. Para que funcione el API de Observación de aves se debe ejecutar el app.py se debe ejecutar esta se ejecutara en http://localhost:5010.
+4. Adicional se encuentra el documento .pdf donde se encuentra el mockup de la aplicación mas las versiones de python y las bibliotecas utilizadas para el desarrollo de la Aplicación.
 
