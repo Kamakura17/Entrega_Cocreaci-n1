@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biomaexplorer</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-     crossorigin=""/>
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <link rel="stylesheet" href="../css/Styles.css">
     <link rel="icon" href="/biomaexplorer/images/DALL·E-2024-06-05-20.44.ico" type=".ico" sizes="16px">
 </head>
+
 <body>
     <header class="header-bg p-3">
         <div class="container">
@@ -22,7 +24,8 @@
                 </div>
                 <div>
                     <form action="https://www.google.com/search" method="get" target="_blank" class="d-flex">
-                        <input type="search" name="q" class="form-control me-2" placeholder="Buscar..." aria-label="Buscar">
+                        <input type="search" name="q" class="form-control me-2" placeholder="Buscar..."
+                            aria-label="Buscar">
                         <button type="submit" class="btn btn-primary">Buscar</button>
                     </form>
                 </div>
@@ -31,7 +34,8 @@
     </header>
     <nav class="navbar navbar-expand-lg navbar-light nav-custom">
         <div class="container">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
@@ -40,7 +44,8 @@
                         <a class="nav-link header-text" href="/biomaexplorer/">Home</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle header-text" href="#" id="navbarDropdownMenuFlora" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle header-text" href="#" id="navbarDropdownMenuFlora"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Flora
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuFlora">
@@ -49,7 +54,8 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle header-text" href="#" id="navbarDropdownMenuFauna" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle header-text" href="#" id="navbarDropdownMenuFauna"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Fauna
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuFauna">
@@ -59,6 +65,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link header-text" href="../pages/Ecosistemas.html">Ecosistemas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link header-text" href="pages/Aves.html">Aves</a>
                     </li>
                 </ul>
             </div>
@@ -72,285 +81,346 @@
                 <div class="row  gx-4 gy-4">
                     <div class="col-md-4">
                         <div class="card">
-                            <img src="../galery/flora/cundinamarca/Cucharillo01.jpg" class="card-img-top" alt="Nombre de la Planta">
+                            <img src="../galery/flora/cundinamarca/Cucharillo01.jpg" class="card-img-top"
+                                alt="Nombre de la Planta">
                             <div class="card-body">
                                 <h5 class="card-title">Cucharillo (Renealmia alpinia)</h5>
                                 <div class="card-text">
                                     <ul>
-                                        <li><span class="title-card">Zona de Crecimiento:</span><span class="text-card">Bosques húmedos tropicales.</span></li>
-                                        <li><span class="title-card">Características Especiales:</span><span class="text-card">Frutos picantes usados en la cocina local y propiedades medicinales para dolores y fiebres.</span></li>
+                                        <li><span class="title-card">Zona de Crecimiento:</span><span
+                                                class="text-card">Bosques húmedos tropicales.</span></li>
+                                        <li><span class="title-card">Características Especiales:</span><span
+                                                class="text-card">Frutos picantes usados en la cocina local y
+                                                propiedades medicinales para dolores y fiebres.</span></li>
                                     </ul>
                                 </div>
                                 <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
-                                data-title="Cucharillo (Renealmia alpinia)"
-                                data-text="Arbusto nativo de los bosques tropicales de Cundinamarca, reconocido por sus vistosas flores rojas y frutos que se consumen localmente por su sabor picante. También es valorado en medicina tradicional por sus propiedades antiinflamatorias.">
-                                Más información
+                                    data-title="Cucharillo (Renealmia alpinia)"
+                                    data-text="Arbusto nativo de los bosques tropicales de Cundinamarca, reconocido por sus vistosas flores rojas y frutos que se consumen localmente por su sabor picante. También es valorado en medicina tradicional por sus propiedades antiinflamatorias.">
+                                    Más información
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card">
-                            <img src="../galery/flora/cundinamarca/Palma de Cera del Quindío01.jpg" class="card-img-top" alt="Nombre de la Planta">
+                            <img src="../galery/flora/cundinamarca/Palma de Cera del Quindío01.jpg" class="card-img-top"
+                                alt="Nombre de la Planta">
                             <div class="card-body">
                                 <h5 class="card-title">Palma de Cera del Quindío (Ceroxylon quindiuense)</h5>
                                 <div class="card-text">
                                     <ul>
-                                        <li><span class="title-card">Zona de Crecimiento:</span><span class="text-card">Altas montañas andinas.</span></li>
-                                        <li><span class="title-card">Características Especiales:</span><span class="text-card">La más alta de las palmas andinas y vital para la conservación del loro orejiamarillo.</span</li>
+                                        <li><span class="title-card">Zona de Crecimiento:</span><span
+                                                class="text-card">Altas montañas andinas.</span></li>
+                                        <li><span class="title-card">Características Especiales:</span><span
+                                                class="text-card">La más alta de las palmas andinas y vital para la
+                                                conservación del loro orejiamarillo.</span< /li>
                                     </ul>
                                 </div>
                                 <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
-                                data-title="Palma de Cera del Quindío (Ceroxylon quindiuense)"
-                                data-text="La más alta de las palmas andinas, esta especie en peligro de extinción es apreciada por su tronco resistente y su uso ceremonial durante la Semana Santa en algunas regiones colombianas.">
-                                Más información
+                                    data-title="Palma de Cera del Quindío (Ceroxylon quindiuense)"
+                                    data-text="La más alta de las palmas andinas, esta especie en peligro de extinción es apreciada por su tronco resistente y su uso ceremonial durante la Semana Santa en algunas regiones colombianas.">
+                                    Más información
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card">
-                            <img src="../galery/flora/cundinamarca/Árnica01.jpg" class="card-img-top" alt="Nombre de la Planta">
+                            <img src="../galery/flora/cundinamarca/Árnica01.jpg" class="card-img-top"
+                                alt="Nombre de la Planta">
                             <div class="card-body">
                                 <h5 class="card-title">Árnica (Telanthophora grandifolia)</h5>
                                 <div class="card-text">
                                     <ul>
-                                        <li><span class="title-card">Zona de Crecimiento:</span><span class="text-card">Bosques de montaña.</span></li>
-                                        <li><span class="title-card">Características Especiales:</span><span class="text-card">Utilizada tradicionalmente para aliviar el dolor y la inflamación.</span</li>
+                                        <li><span class="title-card">Zona de Crecimiento:</span><span
+                                                class="text-card">Bosques de montaña.</span></li>
+                                        <li><span class="title-card">Características Especiales:</span><span
+                                                class="text-card">Utilizada tradicionalmente para aliviar el dolor y la
+                                                inflamación.</span< /li>
                                     </ul>
                                 </div>
                                 <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
-                                data-title="Árnica (Telanthophora grandifolia)"
-                                data-text="Esta planta herbácea es utilizada tradicionalmente para tratar contusiones y dolores gracias a sus propiedades antiinflamatorias. Se encuentra en los bosques húmedos de montaña y es fácilmente reconocible por sus grandes flores amarillas.">
-                                Más información
+                                    data-title="Árnica (Telanthophora grandifolia)"
+                                    data-text="Esta planta herbácea es utilizada tradicionalmente para tratar contusiones y dolores gracias a sus propiedades antiinflamatorias. Se encuentra en los bosques húmedos de montaña y es fácilmente reconocible por sus grandes flores amarillas.">
+                                    Más información
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card">
-                            <img src="../galery/flora/cundinamarca/Cedro Negro01.jpg" class="card-img-top" alt="Nombre de la Planta">
+                            <img src="../galery/flora/cundinamarca/Cedro Negro01.jpg" class="card-img-top"
+                                alt="Nombre de la Planta">
                             <div class="card-body">
                                 <h5 class="card-title">Cedro Negro (Juglans neotropica)</h5>
                                 <div class="card-text">
                                     <ul>
-                                        <li><span class="title-card">Zona de Crecimiento:</span><span class="text-card">Bosques andinos.</span></li>
-                                        <li><span class="title-card">Características Especiales:</span><span class="text-card">Madera de alta calidad, utilizada en ebanistería y carpintería fina.</span</li>
+                                        <li><span class="title-card">Zona de Crecimiento:</span><span
+                                                class="text-card">Bosques andinos.</span></li>
+                                        <li><span class="title-card">Características Especiales:</span><span
+                                                class="text-card">Madera de alta calidad, utilizada en ebanistería y
+                                                carpintería fina.</span< /li>
                                     </ul>
                                 </div>
                                 <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
-                                data-title="Cedro Negro (Juglans neotropica)"
-                                data-text="Árbol valorado por su madera oscura y duradera, ideal para muebles de alta calidad y construcciones. Su presencia es indicativa de bosques bien conservados en la región.">
-                                Más información
+                                    data-title="Cedro Negro (Juglans neotropica)"
+                                    data-text="Árbol valorado por su madera oscura y duradera, ideal para muebles de alta calidad y construcciones. Su presencia es indicativa de bosques bien conservados en la región.">
+                                    Más información
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card">
-                            <img src="../galery/flora/cundinamarca/Mano de Oso01.jpeg" class="card-img-top" alt="Nombre de la Planta">
+                            <img src="../galery/flora/cundinamarca/Mano de Oso01.jpeg" class="card-img-top"
+                                alt="Nombre de la Planta">
                             <div class="card-body">
                                 <h5 class="card-title">Mano de Oso (Oreopanax floribundum)</h5>
                                 <div class="card-text">
                                     <ul>
-                                        <li><span class="title-card">Zona de Crecimiento:</span><span class="text-card">Bosques montanos.</span></li>
-                                        <li><span class="title-card">Características Especiales:</span><span class="text-card">Hojas grandes en forma de mano, ideal para jardinería ornamental.</span></li>
+                                        <li><span class="title-card">Zona de Crecimiento:</span><span
+                                                class="text-card">Bosques montanos.</span></li>
+                                        <li><span class="title-card">Características Especiales:</span><span
+                                                class="text-card">Hojas grandes en forma de mano, ideal para jardinería
+                                                ornamental.</span></li>
                                     </ul>
                                 </div>
                                 <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
-                                data-title="Mano de Oso (Oreopanax floribundum)"
-                                data-text="Popular en jardinería por sus grandes hojas decorativas que se asemejan a manos abiertas. Es común en los bosques montañosos y contribuye a la biodiversidad local.">
-                                Más información
+                                    data-title="Mano de Oso (Oreopanax floribundum)"
+                                    data-text="Popular en jardinería por sus grandes hojas decorativas que se asemejan a manos abiertas. Es común en los bosques montañosos y contribuye a la biodiversidad local.">
+                                    Más información
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card">
-                            <img src="../galery/flora/cundinamarca/Guayacán Amarillo01.jpg" class="card-img-top" alt="Nombre de la Planta">
+                            <img src="../galery/flora/cundinamarca/Guayacán Amarillo01.jpg" class="card-img-top"
+                                alt="Nombre de la Planta">
                             <div class="card-body">
                                 <h5 class="card-title">Guayacán Amarillo (Tabebuia chrysantha)</h5>
                                 <div class="card-text">
                                     <ul>
-                                        <li><span class="title-card">Zona de Crecimiento:</span><span class="text-card">Zonas secas interandinas.</span></li>
-                                        <li><span class="title-card">Características Especiales:</span><span class="text-card"> Floración amarilla espectacular que atrae a turistas y fotógrafos de naturaleza.</span></li>
+                                        <li><span class="title-card">Zona de Crecimiento:</span><span
+                                                class="text-card">Zonas secas interandinas.</span></li>
+                                        <li><span class="title-card">Características Especiales:</span><span
+                                                class="text-card"> Floración amarilla espectacular que atrae a turistas
+                                                y fotógrafos de naturaleza.</span></li>
                                     </ul>
                                 </div>
                                 <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
-                                data-title="Guayacán Amarillo (Tabebuia chrysantha)"
-                                data-text="Destacado por su dramática floración amarilla durante la estación seca, este árbol es un espectáculo natural en las zonas secas de Cundinamarca, atrayendo a turistas y naturalistas.">
-                                Más información
+                                    data-title="Guayacán Amarillo (Tabebuia chrysantha)"
+                                    data-text="Destacado por su dramática floración amarilla durante la estación seca, este árbol es un espectáculo natural en las zonas secas de Cundinamarca, atrayendo a turistas y naturalistas.">
+                                    Más información
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card">
-                            <img src="../galery/flora/cundinamarca/Pino Romerón01.jpg" class="card-img-top" alt="Nombre de la Planta">
+                            <img src="../galery/flora/cundinamarca/Pino Romerón01.jpg" class="card-img-top"
+                                alt="Nombre de la Planta">
                             <div class="card-body">
                                 <h5 class="card-title">Pino Romerón (Podocarpus oleifolius)</h5>
                                 <div class="card-text">
                                     <ul>
-                                        <li><span class="title-card">Zona de Crecimiento:</span><span class="text-card">Altos Andes.</span></li>
-                                        <li><span class="title-card">Características Especiales:</span><span class="text-card">Esencial para la conservación de agua y protección de suelos.</span></li>
+                                        <li><span class="title-card">Zona de Crecimiento:</span><span
+                                                class="text-card">Altos Andes.</span></li>
+                                        <li><span class="title-card">Características Especiales:</span><span
+                                                class="text-card">Esencial para la conservación de agua y protección de
+                                                suelos.</span></li>
                                     </ul>
                                 </div>
                                 <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
-                                data-title="Pino Romerón (Podocarpus oleifolius)"
-                                data-text="Esta conífera nativa se encuentra en los altos Andes y es esencial para la conservación del hábitat de numerosas especies de aves y mamíferos, así como para la protección del suelo y el agua.">
-                                Más información
+                                    data-title="Pino Romerón (Podocarpus oleifolius)"
+                                    data-text="Esta conífera nativa se encuentra en los altos Andes y es esencial para la conservación del hábitat de numerosas especies de aves y mamíferos, así como para la protección del suelo y el agua.">
+                                    Más información
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card">
-                            <img src="../galery/flora/cundinamarca/Lengua de Suegra01.jpg" class="card-img-top" alt="Nombre de la Planta">
+                            <img src="../galery/flora/cundinamarca/Lengua de Suegra01.jpg" class="card-img-top"
+                                alt="Nombre de la Planta">
                             <div class="card-body">
                                 <h5 class="card-title">Lengua de Suegra (Sansevieria trifasciata)</h5>
                                 <div class="card-text">
                                     <ul>
-                                        <li><span class="title-card">Zona de Crecimiento:</span><span class="text-card">Regiones áridas.</span></li>
-                                        <li><span class="title-card">Características Especiales:</span><span class="text-card">Purifica el aire y es extremadamente resistente a condiciones de poca luz.</span></li>
+                                        <li><span class="title-card">Zona de Crecimiento:</span><span
+                                                class="text-card">Regiones áridas.</span></li>
+                                        <li><span class="title-card">Características Especiales:</span><span
+                                                class="text-card">Purifica el aire y es extremadamente resistente a
+                                                condiciones de poca luz.</span></li>
                                     </ul>
                                 </div>
                                 <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
-                                data-title="Lengua de Suegra (Sansevieria trifasciata)"
-                                data-text="Conocida por su capacidad de purificar el aire y su resistencia a condiciones de poca luz, esta planta es un elemento común en hogares y oficinas. Su origen en las zonas áridas de Cundinamarca le confiere una notable resistencia.">
-                                Más información
+                                    data-title="Lengua de Suegra (Sansevieria trifasciata)"
+                                    data-text="Conocida por su capacidad de purificar el aire y su resistencia a condiciones de poca luz, esta planta es un elemento común en hogares y oficinas. Su origen en las zonas áridas de Cundinamarca le confiere una notable resistencia.">
+                                    Más información
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card">
-                            <img src="../galery/flora/cundinamarca/Frailejón01.jpg" class="card-img-top" alt="Nombre de la Planta">
+                            <img src="../galery/flora/cundinamarca/Frailejón01.jpg" class="card-img-top"
+                                alt="Nombre de la Planta">
                             <div class="card-body">
                                 <h5 class="card-title">Frailejón (Espeletia spp.)</h5>
                                 <div class="card-text">
                                     <ul>
-                                        <li><span class="title-card">Zona de Crecimiento:</span><span class="text-card">Páramos andinos.</span></li>
-                                        <li><span class="title-card">Características Especiales:</span><span class="text-card">Esencial para la regulación hídrica del páramo, almacena agua en sus rosetas.</span></li>
+                                        <li><span class="title-card">Zona de Crecimiento:</span><span
+                                                class="text-card">Páramos andinos.</span></li>
+                                        <li><span class="title-card">Características Especiales:</span><span
+                                                class="text-card">Esencial para la regulación hídrica del páramo,
+                                                almacena agua en sus rosetas.</span></li>
                                     </ul>
                                 </div>
                                 <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
-                                data-title="Frailejón (Espeletia spp.)"
-                                data-text=" Planta icónica de los páramos con una forma única adaptada para la supervivencia en altitudes elevadas y climas fríos. Su presencia es crucial para el ecosistema, pues ayuda a retener el agua en el suelo.">
-                                Más información
+                                    data-title="Frailejón (Espeletia spp.)"
+                                    data-text=" Planta icónica de los páramos con una forma única adaptada para la supervivencia en altitudes elevadas y climas fríos. Su presencia es crucial para el ecosistema, pues ayuda a retener el agua en el suelo.">
+                                    Más información
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card">
-                            <img src="../galery/flora/cundinamarca/Encenillo01.jpeg" class="card-img-top" alt="Nombre de la Planta">
+                            <img src="../galery/flora/cundinamarca/Encenillo01.jpeg" class="card-img-top"
+                                alt="Nombre de la Planta">
                             <div class="card-body">
                                 <h5 class="card-title">Encenillo (Weinmannia tomentosa)</h5>
                                 <div class="card-text">
                                     <ul>
-                                        <li><span class="title-card">Zona de Crecimiento:</span><span class="text-card">Bosques de niebla andinos.</span></li>
-                                        <li><span class="title-card">Características Especiales:</span><span class="text-card">Madera utilizada en herramientas y carpintería local.</span></li>
+                                        <li><span class="title-card">Zona de Crecimiento:</span><span
+                                                class="text-card">Bosques de niebla andinos.</span></li>
+                                        <li><span class="title-card">Características Especiales:</span><span
+                                                class="text-card">Madera utilizada en herramientas y carpintería
+                                                local.</span></li>
                                     </ul>
                                 </div>
                                 <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
-                                data-title="Encenillo (Weinmannia tomentosa)"
-                                data-text="Este árbol es esencial para la protección de cuencas hidrográficas y la regeneración natural de bosques montanos. Su madera es utilizada localmente para la fabricación de herramientas y en carpintería.">
-                                Más información
+                                    data-title="Encenillo (Weinmannia tomentosa)"
+                                    data-text="Este árbol es esencial para la protección de cuencas hidrográficas y la regeneración natural de bosques montanos. Su madera es utilizada localmente para la fabricación de herramientas y en carpintería.">
+                                    Más información
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card">
-                            <img src="../galery/flora/cundinamarca/Carbonero01.jpeg" class="card-img-top" alt="Nombre de la Planta">
+                            <img src="../galery/flora/cundinamarca/Carbonero01.jpeg" class="card-img-top"
+                                alt="Nombre de la Planta">
                             <div class="card-body">
                                 <h5 class="card-title">Carbonero (Baccharis latifolia)</h5>
                                 <div class="card-text">
                                     <ul>
-                                        <li><span class="title-card">Zona de Crecimiento:</span><span class="text-card">Páramos.</span></li>
-                                        <li><span class="title-card">Características Especiales:</span><span class="text-card">Propiedades medicinales en tratamientos de heridas y dolencias</span></li>
+                                        <li><span class="title-card">Zona de Crecimiento:</span><span
+                                                class="text-card">Páramos.</span></li>
+                                        <li><span class="title-card">Características Especiales:</span><span
+                                                class="text-card">Propiedades medicinales en tratamientos de heridas y
+                                                dolencias</span></li>
                                     </ul>
                                 </div>
                                 <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
-                                data-title="Carbonero (Baccharis latifolia)"
-                                data-text="Arbusto típico del páramo que se utiliza en la medicina tradicional para tratar diversas dolencias. Su capacidad para crecer en suelos pobres lo hace vital para la conservación del suelo.">
-                                Más información
+                                    data-title="Carbonero (Baccharis latifolia)"
+                                    data-text="Arbusto típico del páramo que se utiliza en la medicina tradicional para tratar diversas dolencias. Su capacidad para crecer en suelos pobres lo hace vital para la conservación del suelo.">
+                                    Más información
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card">
-                            <img src="../galery/flora/cundinamarca/Mortino01.jpg" class="card-img-top" alt="Nombre de la Planta">
+                            <img src="../galery/flora/cundinamarca/Mortino01.jpg" class="card-img-top"
+                                alt="Nombre de la Planta">
                             <div class="card-body">
                                 <h5 class="card-title">Mortiño (Vaccinium meridionale)</h5>
                                 <div class="card-text">
                                     <ul>
-                                        <li><span class="title-card">Zona de Crecimiento:</span><span class="text-card">Bosques montanos.</span></li>
-                                        <li><span class="title-card">Características Especiales:</span><span class="text-card">Bayas comestibles con alto contenido antioxidante, usadas en repostería.</span></li>
+                                        <li><span class="title-card">Zona de Crecimiento:</span><span
+                                                class="text-card">Bosques montanos.</span></li>
+                                        <li><span class="title-card">Características Especiales:</span><span
+                                                class="text-card">Bayas comestibles con alto contenido antioxidante,
+                                                usadas en repostería.</span></li>
                                     </ul>
                                 </div>
                                 <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
-                                data-title="Mortiño (Vaccinium meridionale)"
-                                data-text="Arbusto que produce bayas comestibles ricas en antioxidantes, apreciadas en la cocina local para la elaboración de postres y bebidas.">
-                                Más información
+                                    data-title="Mortiño (Vaccinium meridionale)"
+                                    data-text="Arbusto que produce bayas comestibles ricas en antioxidantes, apreciadas en la cocina local para la elaboración de postres y bebidas.">
+                                    Más información
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card">
-                            <img src="../galery/flora/cundinamarca/Gaques01.jpeg" class="card-img-top" alt="Nombre de la Planta">
+                            <img src="../galery/flora/cundinamarca/Gaques01.jpeg" class="card-img-top"
+                                alt="Nombre de la Planta">
                             <div class="card-body">
                                 <h5 class="card-title">Gaques (Clusia multiflora)</h5>
                                 <div class="card-text">
                                     <ul>
-                                        <li><span class="title-card">Zona de Crecimiento:</span><span class="text-card">Suelos rocosos y degradados.</span></li>
-                                        <li><span class="title-card">Características Especiales:</span><span class="text-card">Resistencia a condiciones extremas, ideal para proyectos de reforestación.</span></li>
+                                        <li><span class="title-card">Zona de Crecimiento:</span><span
+                                                class="text-card">Suelos rocosos y degradados.</span></li>
+                                        <li><span class="title-card">Características Especiales:</span><span
+                                                class="text-card">Resistencia a condiciones extremas, ideal para
+                                                proyectos de reforestación.</span></li>
                                     </ul>
                                 </div>
                                 <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
-                                data-title="Gaques (Clusia multiflora)"
-                                data-text="Este arbusto es conocido por su resistencia y su capacidad de crecer en suelos rocosos, lo que lo hace ideal para la reforestación y el paisajismo en áreas degradadas.">
-                                Más información
+                                    data-title="Gaques (Clusia multiflora)"
+                                    data-text="Este arbusto es conocido por su resistencia y su capacidad de crecer en suelos rocosos, lo que lo hace ideal para la reforestación y el paisajismo en áreas degradadas.">
+                                    Más información
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card">
-                            <img src="../galery/flora/cundinamarca/Passiflora Caerulea (Pasionaria).webp" class="card-img-top" alt="Nombre de la Planta">
+                            <img src="../galery/flora/cundinamarca/Passiflora Caerulea (Pasionaria).webp"
+                                class="card-img-top" alt="Nombre de la Planta">
                             <div class="card-body">
                                 <h5 class="card-title">Passiflora Caerulea (Pasionaria)</h5>
                                 <div class="card-text">
                                     <ul>
-                                        <li><span class="title-card">Zona de Crecimiento:</span><span class="text-card">Zonas templadas a cálidas.</span></li>
-                                        <li><span class="title-card">Características Especiales:</span><span class="text-card">Flores ornamentales espectaculares y fruto comestible conocido como maracuyá.</span></li>
+                                        <li><span class="title-card">Zona de Crecimiento:</span><span
+                                                class="text-card">Zonas templadas a cálidas.</span></li>
+                                        <li><span class="title-card">Características Especiales:</span><span
+                                                class="text-card">Flores ornamentales espectaculares y fruto comestible
+                                                conocido como maracuyá.</span></li>
                                     </ul>
                                 </div>
                                 <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
-                                data-title="Passiflora Caerulea (Pasionaria)"
-                                data-text="Esta enredadera es famosa por sus espectaculares flores azules y su fruto comestible, el maracuyá. Es utilizada tanto en jardinería ornamental como en la producción de alimentos.">
-                                Más información
+                                    data-title="Passiflora Caerulea (Pasionaria)"
+                                    data-text="Esta enredadera es famosa por sus espectaculares flores azules y su fruto comestible, el maracuyá. Es utilizada tanto en jardinería ornamental como en la producción de alimentos.">
+                                    Más información
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card">
-                            <img src="../galery/flora/cundinamarca/Orquídea01.jpeg" class="card-img-top" alt="Nombre de la Planta">
+                            <img src="../galery/flora/cundinamarca/Orquídea01.jpeg" class="card-img-top"
+                                alt="Nombre de la Planta">
                             <div class="card-body">
                                 <h5 class="card-title">Orquídea (Cattleya Trianae)</h5>
                                 <div class="card-text">
                                     <ul>
-                                        <li><span class="title-card">Zona de Crecimiento:</span><span class="text-card">Predomina en los bosques nublados de Cundinamarca, a elevaciones moderadas.</span></li>
-                                        <li><span class="title-card">Características Especiales:</span><span class="text-card">Orquídea nacional de Colombia, destaca por sus flores grandes y coloridas.</span></li>
+                                        <li><span class="title-card">Zona de Crecimiento:</span><span
+                                                class="text-card">Predomina en los bosques nublados de Cundinamarca, a
+                                                elevaciones moderadas.</span></li>
+                                        <li><span class="title-card">Características Especiales:</span><span
+                                                class="text-card">Orquídea nacional de Colombia, destaca por sus flores
+                                                grandes y coloridas.</span></li>
                                     </ul>
                                 </div>
                                 <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
-                                data-title="Orquídea (Cattleya Trianae)"
-                                data-text=" Conocida como la orquídea nacional de Colombia, esta espectacular especie se encuentra en los bosques nublados de Cundinamarca. Se caracteriza por sus grandes flores de variados colores, principalmente tonos de rosa y púrpura, con un distintivo labelo. La Cattleya Trianae florece principalmente entre diciembre y febrero y es altamente valorada tanto por su belleza como por su importancia cultural y ecológica en la región. Su preservación es esencial dado su estado vulnerable debido a la recolección excesiva y la pérdida de hábitat.">
-                                Más información
+                                    data-title="Orquídea (Cattleya Trianae)"
+                                    data-text=" Conocida como la orquídea nacional de Colombia, esta espectacular especie se encuentra en los bosques nublados de Cundinamarca. Se caracteriza por sus grandes flores de variados colores, principalmente tonos de rosa y púrpura, con un distintivo labelo. La Cattleya Trianae florece principalmente entre diciembre y febrero y es altamente valorada tanto por su belleza como por su importancia cultural y ecológica en la región. Su preservación es esencial dado su estado vulnerable debido a la recolección excesiva y la pérdida de hábitat.">
+                                    Más información
                                 </a>
                             </div>
                         </div>
@@ -360,20 +430,20 @@
         </div>
         <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
             <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                <h5 class="modal-title" id="infoModalLabel">Información Detallada</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                Aquí va el contenido dinámico...
-                </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="infoModalLabel">Información Detallada</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Aquí va el contenido dinámico...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
                 </div>
             </div>
-            </div>
-        </div> 
+        </div>
     </main>
     <footer class="bg-dark text-white mt-4">
         <div class="container">
@@ -381,7 +451,8 @@
                 <div class="col-md-4 footer-margin">
                     <h5>Secciones</h5>
                     <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="/biomaexplorer/" class="nav-link p-0 text-white">Inicio</a></li>
+                        <li class="nav-item mb-2"><a href="/biomaexplorer/" class="nav-link p-0 text-white">Inicio</a>
+                        </li>
                         <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Sobre nosotros</a></li>
                         <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Servicios</a></li>
                         <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Contacto</a></li>
@@ -390,16 +461,20 @@
                 <div class="col-md-4 footer-margin">
                     <h5>Síguenos</h5>
                     <ul class="nav">
-                        <li class="nav-icon"><a href="https://es-la.facebook.com/" class="nav-link px-2 text-white"><i class="fab fa-facebook-f facebook-icon"></i></a></li>
-                        <li class="nav-icon"><a href="https://x.com/?lang-en" class="nav-link px-2 text-white"><i class="fab fa-twitter twitter-icon"></i></a></li>
-                        <li class="nav-icon"><a href="https://www.instagram.com/" class="nav-link px-2 text-white"><i class="fab fa-instagram instagram-icon"></i></a></li>
+                        <li class="nav-icon"><a href="https://es-la.facebook.com/" class="nav-link px-2 text-white"><i
+                                    class="fab fa-facebook-f facebook-icon"></i></a></li>
+                        <li class="nav-icon"><a href="https://x.com/?lang-en" class="nav-link px-2 text-white"><i
+                                    class="fab fa-twitter twitter-icon"></i></a></li>
+                        <li class="nav-icon"><a href="https://www.instagram.com/" class="nav-link px-2 text-white"><i
+                                    class="fab fa-instagram instagram-icon"></i></a></li>
                     </ul>
                 </div>
                 <div class="col-md-4 footer-margin">
                     <h5>Contacto</h5>
                     <ul class="nav flex-column">
                         <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">+1 234 567 8900</a></li>
-                        <li class="nav-item mb-2"><a href="mailto:support@example.com" class="nav-link p-0 text-white">support@biomaexplorer.com</a></li>
+                        <li class="nav-item mb-2"><a href="mailto:support@example.com"
+                                class="nav-link p-0 text-white">support@biomaexplorer.com</a></li>
                     </ul>
                 </div>
                 <div class="d-flex justify-content-between py-4 my-4 border-top">
@@ -411,14 +486,16 @@
                 </div>
             </div>
         </div>
-    </section>
+        </section>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-     crossorigin=""></script>
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script src="../js/map.js"></script>
     <script src="../js/script.js"></script>
     <script src="../js/modal.js"></script>
 </body>
+
 </html>
