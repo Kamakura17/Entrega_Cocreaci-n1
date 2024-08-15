@@ -28,7 +28,7 @@ Sigue estos pasos para configurar tu entorno y clonar el repositorio:
 
 1. Clona el repositorio:
    ```bash
-   git clone https://github.com/Kamakura17/programaci-nG29.git
+   git clone https://github.com/Kamakura17/Entrega_Cocreaci-n1.git
 2. Mover el folder de biomaexplorar a C:\xampp\htdocs.
 3. Instalar librerias de flask y request en python:
    ```bash
