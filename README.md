@@ -8,10 +8,7 @@ Este repositorio contiene el código fuente y los archivos necesarios para ejecu
 - [Instalación](#instalación)
 - [Ejecución del Código](#ejecución-del-código)
 - [Ejecución de la Página Web](#ejecución-de-la-página-web)
-- [Estructura del Proyecto](#estructura-del-proyecto)
-- [Contribuciones](#contribuciones)
-- [Licencia](#licencia)
-- [Contacto](#contacto)
+
 
 ## Requisitos Previos
 
@@ -39,4 +36,10 @@ Sigue estos pasos para configurar tu entorno y clonar el repositorio:
 2. Para que funcione el API de clima se debe ejecutar el app.py se debe ejecutar esta se ejecutara en http://localhost:5000.
 3. Para que funcione el API de Observación de aves se debe ejecutar el app.py se debe ejecutar esta se ejecutara en http://localhost:5010.
 4. Adicional se encuentra el documento .pdf donde se encuentra el mockup de la aplicación mas las versiones de python y las bibliotecas utilizadas para el desarrollo de la Aplicación.
+
+## Ejecución de la Página Web
+1. Cumplir con el Requisito Previo de instalar XAMPP y mover el folder biomaexplorer a la ruta C:\xampp\htdocs.
+2. Ejecutar el servidor de XAMPP.
+3. Cargar el sitio como http://localhost/biomaexplorer.
+4. Navegar por el sitio.
 
