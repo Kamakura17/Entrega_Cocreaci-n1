@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biomaexplorer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet" href="css/Styles.css">
+    <link rel="icon" href="/biomaexplorer/images/DALL·E-2024-06-05-20.44.ico" type=".ico" sizes="16px">
+</head>
+
+<body>
+    <header class="header-bg p-3">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="logo-container">
+                    <img src="images/logo/Logo.png" alt="Logo" class="logo">
+                </div>
+                <div>
+                    <form action="https://www.google.com/search" method="get" target="_blank" class="d-flex">
+                        <input type="search" name="q" class="form-control me-2" placeholder="Buscar..."
+                            aria-label="Buscar">
+                        <button type="submit" class="btn btn-primary">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-light nav-custom">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link header-text" href="/biomaexplorer/">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle header-text" href="pages/Flora.html"
+                            id="navbarDropdownMenuFlora" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Flora
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuFlora">
+                            <li><a class="dropdown-item" href="pages/fl-cundinamarca.html">Cundinamarca</a></li>
+                            <li><a class="dropdown-item" href="pages/fl-boyaca.html">Boyacá</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle header-text" href="pages/Fauna.html"
+                            id="navbarDropdownMenuFauna" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Fauna
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuFauna">
+                            <li><a class="dropdown-item" href="pages/f-cundinamarca.html">Cundinamarca</a></li>
+                            <li><a class="dropdown-item" href="pages/f-boyaca.html">Boyacá</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link header-text" href="pages/Ecosistemas.html">Ecosistemas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link header-text" href="pages/Aves.html">Aves</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="banner d-flex justify-content-center align-items-center">
+                            <div class="text text-center">
+                                <h1 class="banner-title">EXPLORANDO LA BIODIVERSIDAD EN CUNDINAMARCA Y BOYACA</h1>
+                                <p>"Explora la belleza encantada del altiplano Cundiboyacense. Sumérgete en un mundo
+                                    donde la naturaleza y la cultura se unen para ofrecerte una experiencia única e
+                                    inolvidable."</p>
+                                <button class="btn btn-primary">Más Información</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 box">
+                        <section class="news-section">
+                            <h2 class="box-title">Noticias</h2>
+                            <div class="news-item">
+                                <img src="galery/VS2BINQ2R5GEXFMDDJZQIPUWSA.avif" alt="Descripción de la imagen"
+                                    class="news-image">
+                                <div class="news-content">
+                                    <h3 class="news-title">Cundinamarca, un espacio de biodiversidad en el centro de
+                                        Colombia</h3>
+                                    <article class="news-description">Cuesta creer que a solo 40 minutos desde alguna
+                                        salida de Bogotá el piso térmico ... <a href="#">Leer más</a></article>
+                                    <span>Publicado el: 13/06/2024</span>
+                                </div>
+                            </div>
+                            <div class="news-item">
+                                <img src="galery/Corpoboyaca-Protege-la-Biodiversidad.jpeg"
+                                    alt="Descripción de la imagen" class="news-image">
+                                <div class="news-content">
+                                    <h3 class="news-title">Corpoboyacá trabaja por la protección de la biodiversidad
+                                    </h3>
+                                    <article class="news-description">Para la Corporación Autónoma Regional de Boyacá...
+                                        <a href="#">Leer más</a>
+                                    </article>
+                                    <span>Publicado el: 13/06/2024</span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="col-md-4 box">
+                        <section>
+                            <div class="galery-section">
+                                <h2 class="box-title">Galeria de imagenes</h2>
+                                <div class="thumbnails">
+                                    <div class="thumbnail-small">
+                                        <img class="thumbnail" src="galery/imagen01.jpg" alt="Imagen 1"
+                                            data-description="Los páramos de Cundinamarca y Boyacá en Colombia son ecosistemas únicos, hogar de flora y fauna endémica. Cruciales para la regulación hídrica, estos páramos capturan y almacenan agua, suministrándola a las comunidades locales. Su conservación es vital para mantener la biodiversidad y garantizar el suministro de agua en la región.">
+                                        <img class="thumbnail" src="galery/especies.jpg" alt="Imagen 2"
+                                            data-description="Cundinamarca y Boyacá albergan diversos ecosistemas, desde páramos y bosques andinos hasta humedales y valles interandinos. Estos ecosistemas son fundamentales para la biodiversidad, ofreciendo hábitats a numerosas especies de flora y fauna. Además, juegan un papel crucial en la regulación del agua y la conservación del suelo, siendo esenciales para el equilibrio ambiental de la región.">
+                                        <img class="thumbnail" src="galery/especies2.jpg" alt="Imagen 3"
+                                            data-description="Cundinamarca y Boyacá son hogar del 25% de la flora y fauna de Colombia. En sus diversos ecosistemas habitan especies endémicas como el frailejón y el cóndor de los Andes. Estos territorios son vitales para la conservación de la biodiversidad y la protección de especies amenazadas, siendo esenciales para el equilibrio ecológico del país.">
+                                    </div>
+                                </div>
+                                <div class="thumbnail-large">
+                                    <div class="full-image">
+                                        <img src="galery/imagen01.jpg" alt="Imagen seleccionada" id="full-size-image">
+                                        <div class="image-caption">
+                                            <article id="image-description">Los páramos de Cundinamarca y Boyacá en
+                                                Colombia son ecosistemas únicos, hogar de flora y fauna endémica.
+                                                Cruciales para la regulación hídrica, estos páramos capturan y almacenan
+                                                agua, suministrándola a las comunidades locales. Su conservación es
+                                                vital para mantener la biodiversidad y garantizar el suministro de agua
+                                                en la región.</article>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col-md-4 box">
+                        <section>
+                            <div class="entities-section">
+                                <h2 class="box-title">Entidades ambientales</h2>
+                                <div class="entities-item">
+                                    <img src="galery/logo-corpo-2018.png" alt="Descripción de la imagen"
+                                        class="news-image">
+                                    <div class="news-content">
+                                        <h3 class="news-title">CORPOBOYACA</h3>
+                                        <article class="news-description">Corporación Autónoma Regional de Boyacá.<a
+                                                href="https://www.corpoboyaca.gov.co/la-corporacion/mision-vision-y-objetivos/">Leer
+                                                más</a></article>
+                                    </div>
+                                </div>
+                                <div class="news-item">
+                                    <img src="galery/logo.png" alt="Descripción de la imagen" class="news-image">
+                                    <div class="news-content">
+                                        <h3 class="news-title">CAR</h3>
+                                        <article class="news-description">Corporación Autónoma Regional de
+                                            Cundinamarca.<a href="https://www.car.gov.co/vercontenido/3">Leer más</a>
+                                        </article>
+                                    </div>
+                                </div>
+                                <div class="news-item">
+                                    <img src="galery/Logo-Parques-Principal-1.png" alt="Descripción de la imagen"
+                                        class="news-image">
+                                    <div class="news-content">
+                                        <h3 class="news-title">Parques Nacionales Naturales de Colombia</h3>
+                                        <article class="news-description">Administra áreas protegidas en ambas
+                                            regiones.<a
+                                                href="https://www.parquesnacionales.gov.co/entidad/sistema-nacional-de-parques-nacionales-naturales/">Leer
+                                                más</a></article>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 mapbox">
+                        <div class="map-section">
+                            <iframe src="http://localhost:5000" width="600" height="400"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 mapbox">
+                        <div class="map-section">
+                            <h2 class="box-title">Mapa interactivo</h2>
+                            <div id="mapid"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white mt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 footer-margin">
+                    <h5>Secciones</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="/biomaexplorer/" class="nav-link p-0 text-white">Inicio</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Sobre nosotros</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Servicios</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 footer-margin">
+                    <h5>Síguenos</h5>
+                    <ul class="nav">
+                        <li class="nav-icon"><a href="https://es-la.facebook.com/" class="nav-link px-2 text-white"><i
+                                    class="fab fa-facebook-f facebook-icon"></i></a></li>
+                        <li class="nav-icon"><a href="https://x.com/?lang-en" class="nav-link px-2 text-white"><i
+                                    class="fab fa-twitter twitter-icon"></i></a></li>
+                        <li class="nav-icon"><a href="https://www.instagram.com/" class="nav-link px-2 text-white"><i
+                                    class="fab fa-instagram instagram-icon"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 footer-margin">
+                    <h5>Contacto</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">+1 234 567 8900</a></li>
+                        <li class="nav-item mb-2"><a href="mailto:support@example.com"
+                                class="nav-link p-0 text-white">support@biomaexplorer.com</a></li>
+                    </ul>
+                </div>
+                <div class="d-flex justify-content-between py-4 my-4 border-top">
+                    <article>&copy; 2024 biomaexplorer. Todos los derechos reservados.</article>
+                    <ul class="list-unstyled d-flex">
+                        <li class="ms-3"><a class="link-light" href="#">Política de privacidad</a></li>
+                        <li class="ms-3"><a class="link-light" href="#">Términos de uso</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </section>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="js/map.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
