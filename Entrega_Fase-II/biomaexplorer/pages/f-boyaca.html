@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biomaexplorer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+    <link rel="stylesheet" href="../css/Styles.css">
+    <link rel="icon" href="/biomaexplorer/images/DALL·E-2024-06-05-20.44.ico" type=".ico" sizes="16px">
+</head>
+<body>
+    <header class="header-bg p-3">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="logo-container">
+                    <img src="../images/logo/Logo.png" alt="Logo" class="logo">
+                </div>
+                <div>
+                    <form action="https://www.google.com/search" method="get" target="_blank" class="d-flex">
+                        <input type="search" name="q" class="form-control me-2" placeholder="Buscar..." aria-label="Buscar">
+                        <button type="submit" class="btn btn-primary">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-light nav-custom">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link header-text" href="/biomaexplorer/">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle header-text" href="#" id="navbarDropdownMenuFlora" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Flora
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuFlora">
+                            <li><a class="dropdown-item" href="../pages/fl-cundinamarca.html">Cundinamarca</a></li>
+                            <li><a class="dropdown-item" href="../pages/fl-boyaca.html">Boyacá</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle header-text" href="#" id="navbarDropdownMenuFauna" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Fauna
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuFauna">
+                            <li><a class="dropdown-item" href="../pages/f-cundinamarca.html">Cundinamarca</a></li>
+                            <li><a class="dropdown-item" href="../pages/f-boyaca.html">Boyacá</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link header-text" href="../pages/Ecosistemas.html">Ecosistemas</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="container mt-4">
+            <h1 class="text-center">Fauna de Boyacá</h1>
+            <p class="text-center">Explora la diversidad de animales en la región de Boyacá.</p>
+            <section>
+                <div class="row gx-4 gy-4">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="../galery/Fauna/Boyaca/Cóndor Andino01.jpg" class="card-img-top" alt="Nombre de la Planta">
+                            <div class="card-body">
+                                <h5 class="card-title">Cóndor Andino (Vultur gryphus)</h5>
+                                <div class="card-text">
+                                    <ul>
+                                        <li><span class="title-card">Habitat:</span><span class="text-card">Montañas y altiplanos andinos.</span></li>
+                                        <li><span class="title-card">Características:</span><span class="text-card">Gran envergadura de hasta 3.3 metros que facilita el planeo con mínimo esfuerzo.</span></li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
+                                data-title="Cóndor Andino (Vultur gryphus)"
+                                data-text="El cóndor andino es el ave voladora más grande de América, con una envergadura que puede alcanzar hasta 3.3 metros. Esta especie, que prefiere los altos andinos y zonas rocosas, es un símbolo de los Andes y está en peligro de extinción.">
+                                Más información
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="../galery/Fauna/Boyaca/Oso Andino01.jpg" class="card-img-top" alt="Nombre de la Planta">
+                            <div class="card-body">
+                                <h5 class="card-title">Oso Andino (Tremarctos ornatus)</h5>
+                                <div class="card-text">
+                                    <ul>
+                                        <li><span class="title-card">Habitat:</span><span class="text-card">Bosques nublados y montañosos de los Andes.</span></li>
+                                        <li><span class="title-card">Características:</span><span class="text-card">Omnívoro con una dieta variada que incluye frutas, plantas e insectos.</span></li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
+                                data-title="Oso Andino (Tremarctos ornatus)"
+                                data-text="Conocido como el oso de anteojos por las marcas blancas alrededor de sus ojos, es el único oso nativo de Sudamérica y vive principalmente en los bosques nublados de los Andes.">
+                                Más información
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="../galery/Fauna/Boyaca/Mono Chucuto01.webp" class="card-img-top" alt="Nombre de la Planta">
+                            <div class="card-body">
+                                <h5 class="card-title">Mono Chucuto (Lagothrix lagotricha)</h5>
+                                <div class="card-text">
+                                    <ul>
+                                        <li><span class="title-card">Habitat:</span><span class="text-card">Bosques húmedos tropicales.</span></li>
+                                        <li><span class="title-card">Características:</span><span class="text-card">Inteligente y capaz de usar herramientas, formando grandes grupos sociales.</span></li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
+                                data-title="Mono Chucuto (Lagothrix lagotricha)"
+                                data-text="Este mono, también llamado mono lanudo, se encuentra en los bosques tropicales de la región. Es conocido por su pelaje grueso y comportamiento social, formando grupos grandes que se comunican con diversos sonidos.">
+                                Más información
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="../galery/Fauna/Boyaca/Puma01.jpg" class="card-img-top" alt="Nombre de la Planta">
+                            <div class="card-body">
+                                <h5 class="card-title">Puma (Puma concolor)</h5>
+                                <div class="card-text">
+                                    <ul>
+                                        <li><span class="title-card">Habitat:</span><span class="text-card">Variedad de ambientes como montañas, bosques, desiertos y áreas suburbanas.</span></li>
+                                        <li><span class="title-card">Características:</span><span class="text-card">Territorial, requiere grandes áreas para cazar.</span></li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
+                                data-title="Puma (Puma concolor)"
+                                data-text="El puma, o león de montaña, es un gran felino solitario que habita en diversas regiones, desde montañas hasta bosques. Se alimenta principalmente de ungulados y es uno de los depredadores topes en su hábitat.">
+                                Más información
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="../galery/Fauna/Boyaca/Venado de Cola Blanca01.jpg" class="card-img-top" alt="Nombre de la Planta">
+                            <div class="card-body">
+                                <h5 class="card-title">Venado de Cola Blanca (Odocoileus virginianus)</h5>
+                                <div class="card-text">
+                                    <ul>
+                                        <li><span class="title-card">Habitat:</span><span class="text-card">Bosques, praderas y áreas montañosas.</span></li>
+                                        <li><span class="title-card">Características:</span><span class="text-card">Juega un papel crucial en su ecosistema como herbívoro y presa.</span></li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
+                                data-title="Venado de Cola Blanca (Odocoileus virginianus)"
+                                data-text="Este venado es común en América y se adapta a una gran variedad de hábitats. Es vital para el ecosistema, ya que ayuda a controlar la vegetación y sirve como presa para grandes depredadores.">
+                                Más información
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="../galery/Fauna/Boyaca/Tigrillo Lanudo01.jpg" class="card-img-top" alt="Nombre de la Planta">
+                            <div class="card-body">
+                                <h5 class="card-title">Tigrillo Lanudo (Oncifelis colocolo)</h5>
+                                <div class="card-text">
+                                    <ul>
+                                        <li><span class="title-card">Habitat:</span><span class="text-card">Zonas de bosque y montaña con vegetación densa.</span></li>
+                                        <li><span class="title-card">Características:</span><span class="text-card">Pequeño tamaño y pelaje que facilita el camuflaje.</span></li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
+                                data-title="Tigrillo Lanudo (Oncifelis colocolo)"
+                                data-text="Pequeño y esquivo, este felino nocturno habita principalmente en áreas montañosas. Su pelaje denso lo protege del frío en altitudes elevadas.">
+                                Más información
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="../galery/Fauna/Boyaca/Águila Real01.jpg" class="card-img-top" alt="Nombre de la Planta">
+                            <div class="card-body">
+                                <h5 class="card-title">Águila Real (Aquila chrysaetos)</h5>
+                                <div class="card-text">
+                                    <ul>
+                                        <li><span class="title-card">Habitat:</span><span class="text-card">Zonas montañosas y abiertas.</span></li>
+                                        <li><span class="title-card">Características:</span><span class="text-card">Visión aguda para detectar presas a larga distancia.</span></li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
+                                data-title="Águila Real (Aquila chrysaetos)"
+                                data-text="Este majestuoso ave rapaz es conocida por su velocidad y fuerza. El águila real caza una variedad de presas, incluyendo mamíferos medianos y otras aves.">
+                                Más información
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="../galery/Fauna/Boyaca/Carpintero Real01.jpg" class="card-img-top" alt="Nombre de la Planta">
+                            <div class="card-body">
+                                <h5 class="card-title">Carpintero Real (Colaptes melanochloros)</h5>
+                                <div class="card-text">
+                                    <ul>
+                                        <li><span class="title-card">Habitat:</span><span class="text-card">Bosques y áreas arboladas.</span></li>
+                                        <li><span class="title-card">Características:</span><span class="text-card">Fuerte pico para perforar madera en busca de insectos y para anidar.</span></li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
+                                data-title="Carpintero Real (Colaptes melanochloros)"
+                                data-text="Fácilmente reconocible por su llamativo plumaje y su característico comportamiento de picoteo en los troncos de árboles, este carpintero busca insectos que forman parte esencial de su dieta.">
+                                Más información
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="../galery/Fauna/Boyaca/Rana Marsupial Andina01.jpg" class="card-img-top" alt="Nombre de la Planta">
+                            <div class="card-body">
+                                <h5 class="card-title">Rana Marsupial Andina (Gastrotheca riobambae)</h5>
+                                <div class="card-text">
+                                    <ul>
+                                        <li><span class="title-card">Habitat:</span><span class="text-card">Bosques nubosos andinos.</span></li>
+                                        <li><span class="title-card">Características:</span><span class="text-card">Cría de embriones en una bolsa dorsal hasta su completo desarrollo.</span></li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
+                                data-title="Rana Marsupial Andina (Gastrotheca riobambae)"
+                                data-text="Única entre las ranas por llevar sus huevos en una bolsa dorsal hasta que se desarrollan completamente, esta rana enfrenta riesgos debido a la pérdida de su hábitat y enfermedades.">
+                                Más información
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="../galery/Fauna/Boyaca/Serpiente de Cascabel01.jpeg" class="card-img-top" alt="Nombre de la Planta">
+                            <div class="card-body">
+                                <h5 class="card-title">Serpiente de Cascabel (Crotalus durissus)</h5>
+                                <div class="card-text">
+                                    <ul>
+                                        <li><span class="title-card">Habitat:</span><span class="text-card">Áreas secas y rocosas.</span></li>
+                                        <li><span class="title-card">Características:</span><span class="text-card">Cascabel para advertir a depredadores y protegerse.</span></li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
+                                data-title="Serpiente de Cascabel (Crotalus durissus)"
+                                data-text="Notoria por su cascabel distintivo al final de la cola, esta serpiente venenosa utiliza su mordedura principalmente para defenderse y cazar pequeños mamíferos.">
+                                Más información
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="../galery/Fauna/Boyaca/Colibrí del Sol01.webp" class="card-img-top" alt="Nombre de la Planta">
+                            <div class="card-body">
+                                <h5 class="card-title">Colibrí del Sol (Coeligena orina)</h5>
+                                <div class="card-text">
+                                    <ul>
+                                        <li><span class="title-card">Habitat:</span><span class="text-card">Bosques húmedos de montaña.</span></li>
+                                        <li><span class="title-card">Características:</span><span class="text-card">Batir de alas rápido para mantenerse estático en el aire mientras se alimenta de néctar.</span></li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
+                                data-title="Colibrí del Sol (Coeligena orina)"
+                                data-text="Este colibrí es particularmente notable por su plumaje iridiscente y su capacidad de volar hacia atrás. Se alimenta del néctar de las flores, desempeñando un papel crucial en la polinización.">
+                                Más información
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="../galery/Fauna/Boyaca/Búho de Anteojos01.webp" class="card-img-top" alt="Nombre de la Planta">
+                            <div class="card-body">
+                                <h5 class="card-title">Búho de Anteojos (Pulsatrix perspicillata)</h5>
+                                <div class="card-text">
+                                    <ul>
+                                        <li><span class="title-card">Habitat:</span><span class="text-card">Bosques densos y selvas tropicales.</span></li>
+                                        <li><span class="title-card">Características:</span><span class="text-card">Visión nocturna y audición aguda para cazar en la oscuridad.</span></li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
+                                data-title="Búho de Anteojos (Pulsatrix perspicillata)"
+                                data-text="De hábitos nocturnos, este búho es reconocible por las marcas blancas alrededor de sus ojos. Se alimenta de una variedad de pequeños animales, contribuyendo al control de las poblaciones de plagas.">
+                                Más información
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="../galery/Fauna/Boyaca/Zorro Culpeo01.jpg" class="card-img-top" alt="Nombre de la Planta">
+                            <div class="card-body">
+                                <h5 class="card-title">Zorro Culpeo (Lycalopex culpaeus)</h5>
+                                <div class="card-text">
+                                    <ul>
+                                        <li><span class="title-card">Habitat:</span><span class="text-card">Montañas y páramos.</span></li>
+                                        <li><span class="title-card">Características:</span><span class="text-card">Adaptabilidad a diversos ambientes y dietas.</span></li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
+                                data-title="Zorro Culpeo (Lycalopex culpaeus)"
+                                data-text="También llamado zorro andino, se encuentra principalmente en los páramos y bosques altos. Se alimenta de roedores, aves y frutas, adaptándose a una dieta variada según la disponibilidad de recursos.">
+                                Más información
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="../galery/Fauna/Boyaca/Tangara Real01.jpg" class="card-img-top" alt="Nombre de la Planta">
+                            <div class="card-body">
+                                <h5 class="card-title">Tangara Real (Tangara cyanicollis)</h5>
+                                <div class="card-text">
+                                    <ul>
+                                        <li><span class="title-card">Habitat:</span><span class="text-card">Bosques andinos y subandinos.</span></li>
+                                        <li><span class="title-card">Características:</span><span class="text-card"> Importante para la dispersión de semillas gracias a su dieta frugívora.</span></li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
+                                data-title="Tangara Real (Tangara cyanicollis)"
+                                data-text="Este pájaro vibrante es fácilmente identificable por su plumaje colorido. Habita en los bosques andinos y consume principalmente frutas e insectos.">
+                                Más información
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="../galery/Fauna/Boyaca/Armadillo Andino01.jpg" class="card-img-top" alt="Nombre de la Planta">
+                            <div class="card-body">
+                                <h5 class="card-title">Armadillo Andino (Dasypus novemcinctus)</h5>
+                                <div class="card-text">
+                                    <ul>
+                                        <li><span class="title-card">Habitat:</span><span class="text-card">Bosques secos, praderas y sabanas.</span></li>
+                                        <li><span class="title-card">Características:</span><span class="text-card">Caparazón protector que permite encerrarse casi completamente cuando se siente amenazado.</span></li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
+                                data-title="Armadillo Andino (Dasypus novemcinctus)"
+                                data-text="Conocido localmente como cusumbo, este armadillo se caracteriza por su caparazón protector. Es nocturno y su dieta incluye insectos, pequeños vertebrados y frutas.">
+                                Más información
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="infoModalLabel">Información Detallada</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                Aquí va el contenido dinámico...
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+            </div>
+        </div> 
+    </main>
+    <footer class="bg-dark text-white mt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 footer-margin">
+                    <h5>Secciones</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="/biomaexplorer/" class="nav-link p-0 text-white">Inicio</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Sobre nosotros</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Servicios</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 footer-margin">
+                    <h5>Síguenos</h5>
+                    <ul class="nav">
+                        <li class="nav-icon"><a href="https://es-la.facebook.com/" class="nav-link px-2 text-white"><i class="fab fa-facebook-f facebook-icon"></i></a></li>
+                        <li class="nav-icon"><a href="https://x.com/?lang-en" class="nav-link px-2 text-white"><i class="fab fa-twitter twitter-icon"></i></a></li>
+                        <li class="nav-icon"><a href="https://www.instagram.com/" class="nav-link px-2 text-white"><i class="fab fa-instagram instagram-icon"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 footer-margin">
+                    <h5>Contacto</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">+1 234 567 8900</a></li>
+                        <li class="nav-item mb-2"><a href="mailto:support@example.com" class="nav-link p-0 text-white">support@biomaexplorer.com</a></li>
+                    </ul>
+                </div>
+                <div class="d-flex justify-content-between py-4 my-4 border-top">
+                    <article>&copy; 2024 biomaexplorer. Todos los derechos reservados.</article>
+                    <ul class="list-unstyled d-flex">
+                        <li class="ms-3"><a class="link-light" href="#">Política de privacidad</a></li>
+                        <li class="ms-3"><a class="link-light" href="#">Términos de uso</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+    <script src="../js/map.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/modal.js"></script>
+</body>
+</html>
