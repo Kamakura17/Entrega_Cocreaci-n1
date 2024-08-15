@@ -1,0 +1,162 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-73.4167, 5.4167]
+        },
+        "properties": {
+          "name": "Páramo de Rabanal",
+          "description": "Descripción del Lugar A",
+          "color": "green"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-73.287, 5.753]
+        },
+        "properties": {
+          "name": "Parque Natural Regional Serranía El Peligro",
+          "description": "Descripción del Lugar B",
+          "color": "green"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-73.487, 5.467]
+        },
+        "properties": {
+          "name": "Parque Natural Regional Páramo de Rabanal",
+          "description": "Descripción del Lugar B",
+          "color": "green"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-74.087, 5.300]
+        },
+        "properties": {
+          "name": "Parque Natural Regional Pan de Azúcar-El Consuelo",
+          "description": "Descripción del Lugar B",
+          "color": "green"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-73.74003219130668, 4.520149731990159]
+        },
+        "properties": {
+          "name": "Reserva Natural Páramo de Chingaza",
+          "description": "Descripción del Lugar B",
+          "color": "green"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-74.22274853831084, 4.334346069421262]
+        },
+        "properties": {
+          "name": "Parque Nacional Natural Sumapaz",
+          "description": "Descripción del Lugar B",
+          "color": "green"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-73.46208491210731, 5.674658372371365]
+        },
+        "properties": {
+          "name": "Santuario de Fauna y Flora Iguaque",
+          "description": "Descripción del Lugar B",
+          "color": "green"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-72.32872118592431, 6.397454821928437]
+        },
+        "properties": {
+          "name": "Parque Nacional Natural El Cocuy",
+          "description": "Descripción del Lugar B",
+          "color": "green"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-74.30479662014194, 4.606514902253875]
+        },
+        "properties": {
+          "name": "Parque Chicaque",
+          "description": "Descripción del Lugar B",
+          "color": "green"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-74.49733291829263, 4.328625056794535]
+        },
+        "properties": {
+          "name": "Cerro de Quininí",
+          "description": "Descripción del Lugar B",
+          "color": "green"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-74.49733291829263, 4.328625056794535]
+        },
+        "properties": {
+          "name": "Cerro de Quininí",
+          "description": "Descripción del Lugar B",
+          "color": "green"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-73.54730488110519, 5.637909725093105]
+        },
+        "properties": {
+          "name": "Senderismo hacia los Pozos Azules",
+          "description": "Descripción del Lugar B",
+          "color": "orange"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-72.79790417410298, 5.712492829855819]
+        },
+        "properties": {
+          "name": "Páramo de Ocetá",
+          "description": "Descripción del Lugar B",
+          "color": "green"
+        }
+      }
+    ]
+  }
+  
