@@ -34,7 +34,7 @@
 </head>
 
 <body>
-    <h1>Avistamientos de Aves en Cundinamarca y Boyacá</h1>
+    <!--<h1>Avistamientos de Aves en Cundinamarca y Boyacá</h1> -->
 
     <!-- Selector de región -->
     <form method="get" action="/">
@@ -50,13 +50,6 @@
     <!-- Gráfica de especies más avistadas -->
     <h2>Top 10 especies más avistadas en {{ region }}</h2>
     <img src="data:image/png;base64,{{ grafica_especies }}" alt="Gráfica de especies más avistadas">
-
-    <!-- Mostrar las estadísticas calculadas con NumPy -->
-    <div class="stats">
-        <h2>Estadísticas de avistamientos</h2>
-        <p><strong>Media de avistamientos:</strong> {{ media_avistamientos }}</p>
-        <p><strong>Desviación estándar de avistamientos:</strong> {{ desviacion_estandar }}</p>
-    </div>
 </body>
 
 </html>
