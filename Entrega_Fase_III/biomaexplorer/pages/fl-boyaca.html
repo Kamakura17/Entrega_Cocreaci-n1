@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biomaexplorer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet" href="../css/Styles.css">
+    <link rel="icon" href="/biomaexplorer/images/DALL·E-2024-06-05-20.44.ico" type=".ico" sizes="16px">
+</head>
+
+<body>
+    <header class="header-bg p-3">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="logo-container">
+                    <img src="../images/logo/Logo.png" alt="Logo" class="logo">
+                </div>
+                <div>
+                    <form action="https://www.google.com/search" method="get" target="_blank" class="d-flex">
+                        <input type="search" name="q" class="form-control me-2" placeholder="Buscar..."
+                            aria-label="Buscar">
+                        <button type="submit" class="btn btn-primary">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-light nav-custom">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link header-text" href="/biomaexplorer/">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle header-text" href="#" id="navbarDropdownMenuFlora"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Flora
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuFlora">
+                            <li><a class="dropdown-item" href="../pages/fl-cundinamarca.html">Cundinamarca</a></li>
+                            <li><a class="dropdown-item" href="../pages/fl-boyaca.html">Boyacá</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle header-text" href="#" id="navbarDropdownMenuFauna"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Fauna
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuFauna">
+                            <li><a class="dropdown-item" href="../pages/f-cundinamarca.html">Cundinamarca</a></li>
+                            <li><a class="dropdown-item" href="../pages/f-boyaca.html">Boyacá</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link header-text" href="../pages/Ecosistemas.html">Ecosistemas</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle header-text" id="navbarDropdownMenuFauna" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Aves</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuFauna">
+                            <li><a class="dropdown-item" href="Aves.html">Mapa avistamientos</a></li>
+                            <li><a class="dropdown-item" href="pages/f-boyaca.html">Promedio de avistamientos</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="container mt-4">
+            <h1 class="text-center">Flora de Boyacá</h1>
+            <p class="text-center">Explora la diversidad de plantas en la región de Boyacá.</p>
+            <section>
+                <div class="row gx-4 gy-4">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="../galery/flora/boyaca/frailejon01.jpg" class="card-img-top"
+                                alt="Nombre de la Planta">
+                            <div class="card-body">
+                                <h5 class="card-title">Frailejón (Espeletia)</h5>
+                                <div class="card-text">
+                                    <ul>
+                                        <li><span class="title-card">Zona de Crecimiento:</span><span
+                                                class="text-card">Páramos andinos.</span></li>
+                                        <li><span class="title-card">Características Especiales:</span><span
+                                                class="text-card">Su estructura lanuda protege del frío extremo y
+                                                retiene humedad.</span></li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
+                                    data-title="Frailejón (Espeletia)"
+                                    data-text="Estas plantas son muy representativas de los ecosistemas de páramo en Colombia. Tienen un aspecto distintivo con hojas peludas y largas que les ayudan a resistir el frío. Los frailejones pueden alcanzar varios metros de altura y son vitales para la captación de agua en los páramos.">
+                                    Más información
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="../galery/flora/boyaca/Encenillo01.jpeg" class="card-img-top"
+                                alt="Nombre de la Planta">
+                            <div class="card-body">
+                                <h5 class="card-title">Encenillo (Weinmannia tomentosa)</h5>
+                                <div class="card-text">
+                                    <ul>
+                                        <li><span class="title-card">Zona de Crecimiento:</span><span
+                                                class="text-card">Bosques andinos de montaña.</span></li>
+                                        <li><span class="title-card">Características Especiales:</span><span
+                                                class="text-card">Madera valiosa para restauración de hábitats
+                                                degradados.</span></li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
+                                    data-title="Encenillo (Weinmannia tomentosa)"
+                                    data-text="Un árbol nativo de los Andes colombianos, el encenillo se encuentra comúnmente en los bosques de niebla de Boyacá. Este árbol es apreciado por su madera y por su papel en la conservación del agua y el suelo.">
+                                    Más información
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="../galery/flora/boyaca/Arrayán01.jpg" class="card-img-top"
+                                alt="Nombre de la Planta">
+                            <div class="card-body">
+                                <h5 class="card-title">Arrayán (Myrcianthes leucoxyla)</h5>
+                                <div class="card-text">
+                                    <ul>
+                                        <li><span class="title-card">Zona de Crecimiento:</span><span
+                                                class="text-card">Bosques montanos y andinos.</span></li>
+                                        <li><span class="title-card">Características Especiales:</span><span
+                                                class="text-card">Atrae fauna con sus frutos, esencial para la
+                                                dispersión de semillas.</span></li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
+                                    data-title="Encenillo (Weinmannia tomentosa)"
+                                    data-text="Un árbol nativo de los Andes colombianos, el encenillo se encuentra comúnmente en los bosques de niebla de Boyacá. Este árbol es apreciado por su madera y por su papel en la conservación del agua y el suelo.">
+                                    Más información
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="../galery/flora/boyaca/Roble01.jpg" class="card-img-top"
+                                alt="Nombre de la Planta">
+                            <div class="card-body">
+                                <h5 class="card-title">Roble Andino (Quercus humboldtii)</h5>
+                                <div class="card-text">
+                                    <ul>
+                                        <li><span class="title-card">Zona de Crecimiento:</span><span
+                                                class="text-card">Bosques húmedos montañosos.</span></li>
+                                        <li><span class="title-card">Características Especiales:</span><span
+                                                class="text-card">Hogar para diversas especies y productor de madera
+                                                robusta.</span></li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
+                                    data-title="Encenillo (Weinmannia tomentosa)"
+                                    data-text="Árbol majestuoso de la región andina, valorado por su robusta madera y su papel crucial en el ecosistema, ofreciendo hogar a diversas especies de fauna.">
+                                    Más información
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="../galery/flora/boyaca/canelo01.jpeg" class="card-img-top"
+                                alt="Nombre de la Planta">
+                            <div class="card-body">
+                                <h5 class="card-title">Canelo (Drimys granadensis)</h5>
+                                <div class="card-text">
+                                    <ul>
+                                        <li><span class="title-card">Zona de Crecimiento:</span><span
+                                                class="text-card">Bosques de montaña.</span></li>
+                                        <li><span class="title-card">Características Especiales:</span><span
+                                                class="text-card">Corteza con propiedades medicinales contra dolencias
+                                                estomacales.</span></li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
+                                    data-title="Canelo (Drimys granadensis)"
+                                    data-text="Este árbol se destaca por su corteza aromática y sus propiedades medicinales, usadas tradicionalmente para aliviar dolencias estomacales.">
+                                    Más información
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="../galery/flora/boyaca/Siete_Cueros01.jpg" class="card-img-top"
+                                alt="Nombre de la Planta">
+                            <div class="card-body">
+                                <h5 class="card-title">Siete Cueros (Tibouchina lepidota)</h5>
+                                <div class="card-text">
+                                    <ul>
+                                        <li><span class="title-card">Zona de Crecimiento:</span><span
+                                                class="text-card">Bosques andinos.</span></li>
+                                        <li><span class="title-card">Características Especiales:</span><span
+                                                class="text-card">Floración espectacular que embellece el paisaje
+                                                natural.</span></li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
+                                    data-title="Siete Cueros (Tibouchina lepidota)"
+                                    data-text="Árbol ornamental conocido por sus espectaculares flores de color púrpura que adornan el paisaje andino.">
+                                    Más información
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="../galery/flora/boyaca/Chite01.jpg" class="card-img-top"
+                                alt="Nombre de la Planta">
+                            <div class="card-body">
+                                <h5 class="card-title">Chite (Escallonia myrtilloides)</h5>
+                                <div class="card-text">
+                                    <ul>
+                                        <li><span class="title-card">Zona de Crecimiento:</span><span
+                                                class="text-card">Alta montaña.</span></li>
+                                        <li><span class="title-card">Características Especiales:</span><span
+                                                class="text-card">Resistente al frío, ideal para jardines de
+                                                páramo.</span></li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
+                                    data-title="Chite (Escallonia myrtilloides)"
+                                    data-text="Este arbusto de alta montaña florece con pequeñas flores blancas, ideal para jardines de páramo debido a su resistencia al frío.">
+                                    Más información
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="../galery/flora/boyaca/Lulo de perro01.jpg" class="card-img-top"
+                                alt="Nombre de la Planta">
+                            <div class="card-body">
+                                <h5 class="card-title">Lulo de perro (Solanum vestissimum)</h5>
+                                <div class="card-text">
+                                    <ul>
+                                        <li><span class="title-card">Zona de Crecimiento:</span><span
+                                                class="text-card">Zonas montañosas y bosques.</span></li>
+                                        <li><span class="title-card">Características Especiales:</span><span
+                                                class="text-card">Frutos comestibles con valor culinario local.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
+                                    data-title="Lulo de perro (Solanum vestissimum)"
+                                    data-text="Planta de fruto pequeño y comestible, su sabor ácido es apreciado en la cocina local para hacer jugos y mermeladas.">
+                                    Más información
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="../galery/flora/boyaca/Mortiño Andino01.jpg" class="card-img-top"
+                                alt="Nombre de la Planta">
+                            <div class="card-body">
+                                <h5 class="card-title">Mortiño Andino (Vaccinium meridionale)</h5>
+                                <div class="card-text">
+                                    <ul>
+                                        <li><span class="title-card">Zona de Crecimiento:</span><span
+                                                class="text-card">Bosques montanos y páramos.</span></li>
+                                        <li><span class="title-card">Características Especiales:</span><span
+                                                class="text-card">Frutos antioxidantes usados en conservas y
+                                                vinos.</span></li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
+                                    data-title="Mortiño Andino (Vaccinium meridionale)"
+                                    data-text="Similar al arándano, este arbusto produce frutos ricos en antioxidantes, muy utilizados en la producción de conservas y vinos.">
+                                    Más información
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="../galery/flora/boyaca/Palma de Cera01.jpg" class="card-img-top"
+                                alt="Nombre de la Planta">
+                            <div class="card-body">
+                                <h5 class="card-title">Palma de Cera (Ceroxylon alpinum)</h5>
+                                <div class="card-text">
+                                    <ul>
+                                        <li><span class="title-card">Zona de Crecimiento:</span><span
+                                                class="text-card">Alta montaña andina.</span></li>
+                                        <li><span class="title-card">Características Especiales:</span><span
+                                                class="text-card">Hogar del loro orejiamarillo y símbolo nacional de
+                                                conservación.</span></li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
+                                    data-title="Palma de Cera (Ceroxylon alpinum)"
+                                    data-text="La más alta de las palmas andinas, esta especie es famosa por ser el hábitat del loro orejiamarillo, una especie en peligro de extinción.">
+                                    Más información
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="../galery/flora/boyaca/aguacatillo01.jpg" class="card-img-top"
+                                alt="Nombre de la Planta">
+                            <div class="card-body">
+                                <h5 class="card-title">Aguacatillo (Persea caerulea)</h5>
+                                <div class="card-text">
+                                    <ul>
+                                        <li><span class="title-card">Zona de Crecimiento:</span><span
+                                                class="text-card">Bosques montanos y andinos.</span></li>
+                                        <li><span class="title-card">Características Especiales:</span><span
+                                                class="text-card">Frutos apreciados por la fauna local y madera usada en
+                                                carpintería.</span></li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
+                                    data-title="Aguacatillo (Persea caerulea)"
+                                    data-text="Árbol de porte mediano cuyos frutos son apreciados por la fauna local. Su madera es usada ocasionalmente en carpintería.">
+                                    Más información
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="../galery/flora/boyaca/Chilco01.jpg" class="card-img-top"
+                                alt="Nombre de la Planta">
+                            <div class="card-body">
+                                <h5 class="card-title">Chilco (Fuchsia magellanica)</h5>
+                                <div class="card-text">
+                                    <ul>
+                                        <li><span class="title-card">Zona de Crecimiento:</span><span
+                                                class="text-card">Bosques templados y zonas de montaña.</span></li>
+                                        <li><span class="title-card">Características Especiales:</span><span
+                                                class="text-card">Atrae polinizadores como colibríes con sus flores
+                                                colgantes.</span></li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
+                                    data-title="Chilco (Fuchsia magellanica)"
+                                    data-text="Notable por sus flores colgantes en tonos rojo brillante, es popular en jardinería por su atractivo constante y su capacidad de atraer colibríes.">
+                                    Más información
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="../galery/flora/boyaca/Aliso01.jpg" class="card-img-top"
+                                alt="Nombre de la Planta">
+                            <div class="card-body">
+                                <h5 class="card-title">Aliso (Alnus acuminata)</h5>
+                                <div class="card-text">
+                                    <ul>
+                                        <li><span class="title-card">Zona de Crecimiento:</span><span
+                                                class="text-card">Bosques y áreas degradadas.</span></li>
+                                        <li><span class="title-card">Características Especiales:</span><span
+                                                class="text-card">Fija nitrógeno en el suelo, crucial para la
+                                                reforestación.</span></li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
+                                    data-title="Aliso (Alnus acuminata)"
+                                    data-text="Esencial para la reforestación y recuperación de suelos degradados, este árbol fija nitrógeno en el suelo, mejorando su fertilidad.                                ">
+                                    Más información
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="../galery/flora/boyaca/Pino Colombiano01.jpeg" class="card-img-top"
+                                alt="Nombre de la Planta">
+                            <div class="card-body">
+                                <h5 class="card-title">Pino Colombiano (Podocarpus oleifolius)</h5>
+                                <div class="card-text">
+                                    <ul>
+                                        <li><span class="title-card">Zona de Crecimiento:</span><span
+                                                class="text-card">Bosques neotropicales de alta montaña.</span></li>
+                                        <li><span class="title-card">Características Especiales:</span><span
+                                                class="text-card">Resiliente y adaptativo, vital para conservación de
+                                                bosques.</span></li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
+                                    data-title="Pino Colombiano (Podocarpus oleifolius)"
+                                    data-text="Conocido por su resistencia y adaptabilidad, este pino es crucial para la conservación de los bosques neotropicales de alta montaña.">
+                                    Más información
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="../galery/flora/boyaca/Uva Camarona01.webp" class="card-img-top"
+                                alt="Nombre de la Planta">
+                            <div class="card-body">
+                                <h5 class="card-title">Uva Camarona (Macleania rupestris)</h5>
+                                <div class="card-text">
+                                    <ul>
+                                        <li><span class="title-card">Zona de Crecimiento:</span><span
+                                                class="text-card">Bosques nublados de montaña.</span></li>
+                                        <li><span class="title-card">Características Especiales:</span><span
+                                                class="text-card">Produce frutos comestibles y atractivos, usados en
+                                                jaleas y mermeladas.</span></li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
+                                    data-title="Uva Camarona (Macleania rupestris)"
+                                    data-text="Esta planta es un arbusto epífito que se encuentra comúnmente en los bosques de niebla andinos. Se distingue por sus bellas flores rosadas y sus frutos, que son bayas de color púrpura oscuro, comestibles y apreciadas por su sabor dulce. La Uva Camarona es valorada tanto por su atractivo ornamental como por su potencial en la producción de mermeladas y jaleas. Su capacidad para crecer en alturas y su resistencia a bajas temperaturas la hacen ideal para jardines de montaña.">
+                                    Más información
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="infoModalLabel">Información Detallada</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Aquí va el contenido dinámico...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-dark text-white mt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 footer-margin">
+                    <h5>Secciones</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="/biomaexplorer/" class="nav-link p-0 text-white">Inicio</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Sobre nosotros</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Servicios</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 footer-margin">
+                    <h5>Síguenos</h5>
+                    <ul class="nav">
+                        <li class="nav-icon"><a href="https://es-la.facebook.com/" class="nav-link px-2 text-white"><i
+                                    class="fab fa-facebook-f facebook-icon"></i></a></li>
+                        <li class="nav-icon"><a href="https://x.com/?lang-en" class="nav-link px-2 text-white"><i
+                                    class="fab fa-twitter twitter-icon"></i></a></li>
+                        <li class="nav-icon"><a href="https://www.instagram.com/" class="nav-link px-2 text-white"><i
+                                    class="fab fa-instagram instagram-icon"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 footer-margin">
+                    <h5>Contacto</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">+1 234 567 8900</a></li>
+                        <li class="nav-item mb-2"><a href="mailto:support@example.com"
+                                class="nav-link p-0 text-white">support@biomaexplorer.com</a></li>
+                    </ul>
+                </div>
+                <div class="d-flex justify-content-between py-4 my-4 border-top">
+                    <article>&copy; 2024 biomaexplorer. Todos los derechos reservados.</article>
+                    <ul class="list-unstyled d-flex">
+                        <li class="ms-3"><a class="link-light" href="#">Política de privacidad</a></li>
+                        <li class="ms-3"><a class="link-light" href="#">Términos de uso</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </section>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="../js/map.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/modal.js"></script>
+</body>
+
+</html>

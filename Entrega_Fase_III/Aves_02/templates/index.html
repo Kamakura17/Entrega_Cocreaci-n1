@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avistamientos de Aves en Cundinamarca y Boyacá</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1,
+        h2 {
+            color: #333;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .stats {
+            margin-top: 20px;
+        }
+
+        .stats p {
+            font-size: 1.2em;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Avistamientos de Aves en Cundinamarca y Boyacá</h1>
+
+    <!-- Selector de región -->
+    <form method="get" action="/">
+        <label for="region">Selecciona una región:</label>
+        <select name="region" id="region">
+            <option value="Todas" {% if region=='Todas' %}selected{% endif %}>Todas</option>
+            <option value="Cundinamarca" {% if region=='Cundinamarca' %}selected{% endif %}>Cundinamarca</option>
+            <option value="Boyacá" {% if region=='Boyacá' %}selected{% endif %}>Boyacá</option>
+        </select>
+        <button type="submit">Filtrar</button>
+    </form>
+
+    <!-- Gráfica de especies más avistadas -->
+    <h2>Top 10 especies más avistadas en {{ region }}</h2>
+    <img src="data:image/png;base64,{{ grafica_especies }}" alt="Gráfica de especies más avistadas">
+
+    <!-- Mostrar las estadísticas calculadas con NumPy -->
+    <div class="stats">
+        <h2>Estadísticas de avistamientos</h2>
+        <p><strong>Media de avistamientos:</strong> {{ media_avistamientos }}</p>
+        <p><strong>Desviación estándar de avistamientos:</strong> {{ desviacion_estandar }}</p>
+    </div>
+</body>
+
+</html>

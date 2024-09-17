@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Avistamientos de Aves</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <!-- Encabezado de la página -->
+    <header>
+        <h1>Avistamientos de Aves en Boyacá y Cundinamarca</h1>
+    </header>
+
+    <!-- Contenido principal -->
+    <div class="container">
+        <section>
+            <h2>Buscar Avistamientos</h2>
+            <form onsubmit="updateMap(); return false;">
+                <div class="mb-3">
+                    <label for="region" class="form-label">Seleccione una región:</label>
+                    <select id="region" name="region" class="form-select">
+                        <option value="CO-BOY">Boyacá</option>
+                        <option value="CO-CUN">Cundinamarca</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="start" class="form-label">Fecha de inicio:</label>
+                    <input type="date" id="start" name="start" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label for="end" class="form-label">Fecha de fin:</label>
+                    <input type="date" id="end" name="end" class="form-control">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Buscar</button>
+            </form>
+        </section>
+    </div>
+
+    <!-- Modal para mostrar el mapa -->
+    <div class="modal fade" id="mapModal" tabindex="-1" aria-labelledby="mapModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="mapModalLabel">Mapa de Avistamientos</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="map"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts de Bootstrap y otros -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>

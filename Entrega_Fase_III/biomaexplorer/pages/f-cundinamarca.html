@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biomaexplorer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet" href="../css/Styles.css">
+    <link rel="icon" href="/biomaexplorer/images/DALL·E-2024-06-05-20.44.ico" type=".ico" sizes="16px">
+</head>
+
+<body>
+    <header class="header-bg p-3">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="logo-container">
+                    <img src="../images/logo/Logo.png" alt="Logo" class="logo">
+                </div>
+                <div>
+                    <form action="https://www.google.com/search" method="get" target="_blank" class="d-flex">
+                        <input type="search" name="q" class="form-control me-2" placeholder="Buscar..."
+                            aria-label="Buscar">
+                        <button type="submit" class="btn btn-primary">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-light nav-custom">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link header-text" href="/biomaexplorer/">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle header-text" href="#" id="navbarDropdownMenuFlora"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Flora
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuFlora">
+                            <li><a class="dropdown-item" href="../pages/fl-cundinamarca.html">Cundinamarca</a></li>
+                            <li><a class="dropdown-item" href="../pages/fl-boyaca.html">Boyacá</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle header-text" href="#" id="navbarDropdownMenuFauna"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Fauna
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuFauna">
+                            <li><a class="dropdown-item" href="../pages/f-cundinamarca.html">Cundinamarca</a></li>
+                            <li><a class="dropdown-item" href="../pages/f-boyaca.html">Boyacá</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link header-text" href="../pages/Ecosistemas.html">Ecosistemas</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle header-text" id="navbarDropdownMenuFauna" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Aves</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuFauna">
+                            <li><a class="dropdown-item" href="Aves.html">Mapa avistamientos</a></li>
+                            <li><a class="dropdown-item" href="pages/f-boyaca.html">Promedio de avistamientos</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="container mt-4">
+            <h1 class="text-center">Fauna de Cundinamarca</h1>
+            <p class="text-center">Explora la diversidad de animales en la región de Cundinamarca.</p>
+            <section>
+                <div class="row  gx-4 gy-4">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="../galery/Fauna/Cundinamarca/Búho de anteojos01.jpg" class="card-img-top"
+                                alt="Nombre de la Planta">
+                            <div class="card-body">
+                                <h5 class="card-title">Búho de anteojos (Pulsatrix perspicillata)</h5>
+                                <div class="card-text">
+                                    <ul>
+                                        <li><span class="title-card">Habitat:</span><span class="text-card">Bosques de
+                                                neblina y selvas tropicales hasta los 2,400 metros sobre el nivel del
+                                                mar.</span></li>
+                                        <li><span class="title-card">Características Especiales:</span><span
+                                                class="text-card">Se distingue por sus grandes ojos marrones y un
+                                                "antifaz" que parece un par de anteojos. Son aves nocturnas y excelentes
+                                                cazadoras.</span></li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
+                                    data-title="Búho de anteojos (Pulsatrix perspicillata)"
+                                    data-text="Habita en los bosques de neblina de las tierras bajas y medianas.">
+                                    Más información
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="../galery/Fauna/Cundinamarca/Tangara vitriolina01.webp" class="card-img-top"
+                                alt="Nombre de la Planta">
+                            <div class="card-body">
+                                <h5 class="card-title">Tangara vitriolina (Tangara vitriolina)</h5>
+                                <div class="card-text">
+                                    <ul>
+                                        <li><span class="title-card">Habitat:</span><span class="text-card">Bosques
+                                                húmedos montanos y bordes de bosques entre 1,200 y 2,500 metros.</span>
+                                        </li>
+                                        <li><span class="title-card">Características Especiales:</span><span
+                                                class="text-card">Un pájaro pequeño con plumaje predominantemente azul y
+                                                verde, con una marcada línea negra en la cara. Es sociable y a menudo se
+                                                le ve en grupos.</span></li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
+                                    data-title="Tangara vitriolina (Tangara vitriolina)"
+                                    data-text="Un colorido pájaro nativo de los Andes orientales de Colombia.">
+                                    Más información
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="../galery/Fauna/Cundinamarca/Cucarachero de Apolinar01.jpg" class="card-img-top"
+                                alt="Nombre de la Planta">
+                            <div class="card-body">
+                                <h5 class="card-title">Cucarachero de Apolinar (Cistothorus apolinari)</h5>
+                                <div class="card-text">
+                                    <ul>
+                                        <li><span class="title-card">Habitat:</span><span class="text-card">Endémico de
+                                                los humedales alrededor de Bogotá.</span></li>
+                                        <li><span class="title-card">Características Especiales:</span><span
+                                                class="text-card">Pequeño con un plumaje marrón uniforme y una
+                                                distintiva ceja blanca. Es una especie en peligro de extinción debido a
+                                                la destrucción de su hábitat.</span></li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
+                                    data-title="Cucarachero de Apolinar (Cistothorus apolinari)"
+                                    data-text="Endémico de los humedales alrededor de Bogotá.">
+                                    Más información
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="../galery/Fauna/Cundinamarca/Colibrí de oreja blanca01.jpg" class="card-img-top"
+                                alt="Nombre de la Planta">
+                            <div class="card-body">
+                                <h5 class="card-title">Colibrí de oreja blanca (Basilinna leucotis)</h5>
+                                <div class="card-text">
+                                    <ul>
+                                        <li><span class="title-card">Habitat:</span><span class="text-card">Jardines y
+                                                zonas semiurbanas en la Sabana de Bogotá y bosques de neblina.</span>
+                                        </li>
+                                        <li><span class="title-card">Características Especiales:</span><span
+                                                class="text-card">Colibrí de tamaño medio con destellos verdes en su
+                                                plumaje y parches blancos detrás de los ojos. Es muy ágil y puede volar
+                                                en cualquier dirección.</span></li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
+                                    data-title="Colibrí de oreja blanca (Basilinna leucotis)"
+                                    data-text="Común en jardines y áreas semiurbanas de la Sabana de Bogotá.">
+                                    Más información
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="../galery/Fauna/Cundinamarca/Perdiz colorada01.jpg" class="card-img-top"
+                                alt="Nombre de la Planta">
+                            <div class="card-body">
+                                <h5 class="card-title">Perdiz colorada (Rhynchotus rufescens)</h5>
+                                <div class="card-text">
+                                    <ul>
+                                        <li><span class="title-card">Habitat:</span><span class="text-card">Pastizales y
+                                                zonas abiertas en Cundinamarca.</span></li>
+                                        <li><span class="title-card">Características Especiales:</span><span
+                                                class="text-card">Ave terrestre de tamaño medio con un plumaje marrón
+                                                rojizo y una cola corta. Es conocida por su rapidez al correr.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
+                                    data-title="Perdiz colorada (Rhynchotus rufescens)"
+                                    data-text="Se encuentra en áreas abiertas y pastizales de la región.">
+                                    Más información
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="../galery/Fauna/Cundinamarca/Serpiente de montaña de Cundinamarca01.jpg"
+                                class="card-img-top" alt="Nombre de la Planta">
+                            <div class="card-body">
+                                <h5 class="card-title">Serpiente de montaña de Cundinamarca (Atractus lasallei)</h5>
+                                <div class="card-text">
+                                    <ul>
+                                        <li><span class="title-card">Habitat:</span><span class="text-card">Bosques
+                                                húmedos montanos entre 1,000 y 2,500 metros.</span></li>
+                                        <li><span class="title-card">Características Especiales:</span><span
+                                                class="text-card">Serpiente pequeña y delgada, usualmente de color
+                                                marrón o gris, adaptada a la vida bajo la hojarasca.</span></li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
+                                    data-title="Serpiente de montaña de Cundinamarca (Atractus lasallei)"
+                                    data-text="Una especie endémica de serpiente en los bosques de montaña.">
+                                    Más información
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="../galery/Fauna/Cundinamarca/Rana de lluvia montañera01.jpg" class="card-img-top"
+                                alt="Nombre de la Planta">
+                            <div class="card-body">
+                                <h5 class="card-title">Rana de lluvia montañera (Pristimantis uranobates)</h5>
+                                <div class="card-text">
+                                    <ul>
+                                        <li><span class="title-card">Habitat:</span><span class="text-card">Bosques
+                                                andinos y páramos.</span></li>
+                                        <li><span class="title-card">Características Especiales:</span><span
+                                                class="text-card">Pequeña, generalmente marrón o verde, con una gran
+                                                capacidad para camuflarse en su entorno natural. No necesita agua para
+                                                reproducirse, sus huevos se desarrollan directamente en ranas
+                                                pequeñas.</span></li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
+                                    data-title="Rana de lluvia montañera (Pristimantis uranobates)"
+                                    data-text="Endémica de los bosques andinos.">
+                                    Más información
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="../galery/Fauna/Cundinamarca/Gavilán caminero01.jpg" class="card-img-top"
+                                alt="Nombre de la Planta">
+                            <div class="card-body">
+                                <h5 class="card-title">Gavilán caminero (Rupornis magnirostris)</h5>
+                                <div class="card-text">
+                                    <ul>
+                                        <li><span class="title-card">Habitat:</span><span class="text-card">Áreas
+                                                semiabiertas y agrícolas.</span></li>
+                                        <li><span class="title-card">Características Especiales:</span><span
+                                                class="text-card">Ave rapaz de tamaño mediano con alas anchas y una cola
+                                                larga. Se alimenta de pequeños mamíferos e insectos.</span></li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
+                                    data-title="Gavilán caminero (Rupornis magnirostris)"
+                                    data-text="Un ave rapaz que es más frecuente en las áreas semiabiertas y agrícolas.">
+                                    Más información
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="../galery/Fauna/Cundinamarca/Bogotá rail01.jpg" class="card-img-top"
+                                alt="Nombre de la Planta">
+                            <div class="card-body">
+                                <h5 class="card-title">Bogotá rail (Rallus semiplumbeus)</h5>
+                                <div class="card-text">
+                                    <ul>
+                                        <li><span class="title-card">Habitat:</span><span class="text-card">Endémico de
+                                                los humedales alrededor de Bogotá.</span></li>
+                                        <li><span class="title-card">Características Especiales:</span><span
+                                                class="text-card">Ave escurridiza de plumaje principalmente gris y
+                                                marrón, adaptada para moverse sigilosamente entre la vegetación densa de
+                                                los humedales.</span></li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
+                                    data-title="Bogotá rail (Rallus semiplumbeus)"
+                                    data-text="Una especie de ave endémica de los humedales alrededor de Bogotá.">
+                                    Más información
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="../galery/Fauna/Cundinamarca/Ratón arrozalero montañero01.jpg"
+                                class="card-img-top" alt="Nombre de la Planta">
+                            <div class="card-body">
+                                <h5 class="card-title">Ratón arrozalero montañero (Microryzomys altissimus)</h5>
+                                <div class="card-text">
+                                    <ul>
+                                        <li><span class="title-card">Habitat:</span><span class="text-card">Bosques
+                                                montanos y páramos.</span></li>
+                                        <li><span class="title-card">Características Especiales:</span><span
+                                                class="text-card">Pequeño roedor adaptado a la vida en altitudes
+                                                elevadas, con un pelaje grueso y orejas grandes para el control de la
+                                                temperatura corporal.</span></li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
+                                    data-title="Ratón arrozalero montañero (Microryzomys altissimus)"
+                                    data-text="Un roedor típico de las zonas altas andinas.">
+                                    Más información
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="../galery/Fauna/Cundinamarca/Loro orejiamarillo01.jpg" class="card-img-top"
+                                alt="Nombre de la Planta">
+                            <div class="card-body">
+                                <h5 class="card-title">Loro orejiamarillo (Ognorhynchus icterotis)</h5>
+                                <div class="card-text">
+                                    <ul>
+                                        <li><span class="title-card">Habitat:</span><span class="text-card">Bosques de
+                                                niebla andinos.</span></li>
+                                        <li><span class="title-card">Características Especiales:</span><span
+                                                class="text-card">Loro en peligro crítico de extinción, con plumaje
+                                                amarillo vibrante en las orejas y alas. Vive en grupos y es muy
+                                                vocal.</span></li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
+                                    data-title="Loro orejiamarillo (Ognorhynchus icterotis)"
+                                    data-text="Aunque críticamente amenazado, es parte de la región.">
+                                    Más información
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="../galery/Fauna/Cundinamarca/Anolis de Williams01.jpg" class="card-img-top"
+                                alt="Nombre de la Planta">
+                            <div class="card-body">
+                                <h5 class="card-title">Anolis de Williams (Anolis williamsmittermeierorum)</h5>
+                                <div class="card-text">
+                                    <ul>
+                                        <li><span class="title-card">Habitat:</span><span class="text-card">Bosques
+                                                nublados de Cundinamarca.</span></li>
+                                        <li><span class="title-card">Características Especiales:</span><span
+                                                class="text-card">Lagarto de tamaño pequeño con capacidad para cambiar
+                                                de color, adaptándose a diferentes ambientes y temperaturas.</span></li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
+                                    data-title="Anolis de Williams (Anolis williamsmittermeierorum)"
+                                    data-text="Un lagarto recientemente descrito y endémico de los bosques nublados de Cundinamarca.">
+                                    Más información
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="../galery/Fauna/Cundinamarca/Carpintero carinegro01.jpg" class="card-img-top"
+                                alt="Nombre de la Planta">
+                            <div class="card-body">
+                                <h5 class="card-title">Carpintero carinegro (Dryocopus lineatus)</h5>
+                                <div class="card-text">
+                                    <ul>
+                                        <li><span class="title-card">Habitat:</span><span class="text-card">Bosques y
+                                                áreas arboladas.</span></li>
+                                        <li><span class="title-card">Características Especiales:</span><span
+                                                class="text-card">Gran pájaro carpintero con un llamativo plumaje negro
+                                                y un pico potente, usado para perforar troncos en busca de
+                                                insectos.</span></li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
+                                    data-title="Carpintero carinegro (Dryocopus lineatus)"
+                                    data-text="Común en los bosques y áreas arboladas.">
+                                    Más información
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="../galery/Fauna/Cundinamarca/Zarigüeya andina01.jpg" class="card-img-top"
+                                alt="Nombre de la Planta">
+                            <div class="card-body">
+                                <h5 class="card-title">Zarigüeya andina (Didelphis pernigra)</h5>
+                                <div class="card-text">
+                                    <ul>
+                                        <li><span class="title-card">Habitat:</span><span class="text-card">Montañas y
+                                                bosques andinos.</span></li>
+                                        <li><span class="title-card">Características Especiales:</span><span
+                                                class="text-card">Marsupial de tamaño medio con una bolsa en la que
+                                                lleva a sus crías. Nocturna y omnívora, se adapta bien a diversos
+                                                ambientes.</span></li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
+                                    data-title="Zarigüeya andina (Didelphis pernigra)"
+                                    data-text="Un marsupial que se encuentra en las zonas montañosas y boscosas.">
+                                    Más información
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="../galery/Fauna/Cundinamarca/Murciélago de nariz de cerdo andino01.jpg"
+                                class="card-img-top" alt="Nombre de la Planta">
+                            <div class="card-body">
+                                <h5 class="card-title">Murciélago de nariz de cerdo andino (Platyrrhinus umbratus)</h5>
+                                <div class="card-text">
+                                    <ul>
+                                        <li><span class="title-card">Habitat:</span><span class="text-card">Bosques
+                                                montanos y bosques nublados.</span></li>
+                                        <li><span class="title-card">Características Especiales:</span><span
+                                                class="text-card">Este murciélago tiene una distintiva "nariz de cerdo"
+                                                que ayuda en la ecolocalización. Se alimenta principalmente de
+                                                frutas.</span></li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"
+                                    data-title="Murciélago de nariz de cerdo andino (Platyrrhinus umbratus)"
+                                    data-text="Este murciélago es único en los Andes colombianos.">
+                                    Más información
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="infoModalLabel">Información Detallada</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Aquí va el contenido dinámico...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-dark text-white mt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 footer-margin">
+                    <h5>Secciones</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="/biomaexplorer/" class="nav-link p-0 text-white">Inicio</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Sobre nosotros</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Servicios</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 footer-margin">
+                    <h5>Síguenos</h5>
+                    <ul class="nav">
+                        <li class="nav-icon"><a href="https://es-la.facebook.com/" class="nav-link px-2 text-white"><i
+                                    class="fab fa-facebook-f facebook-icon"></i></a></li>
+                        <li class="nav-icon"><a href="https://x.com/?lang-en" class="nav-link px-2 text-white"><i
+                                    class="fab fa-twitter twitter-icon"></i></a></li>
+                        <li class="nav-icon"><a href="https://www.instagram.com/" class="nav-link px-2 text-white"><i
+                                    class="fab fa-instagram instagram-icon"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 footer-margin">
+                    <h5>Contacto</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">+1 234 567 8900</a></li>
+                        <li class="nav-item mb-2"><a href="mailto:support@example.com"
+                                class="nav-link p-0 text-white">support@biomaexplorer.com</a></li>
+                    </ul>
+                </div>
+                <div class="d-flex justify-content-between py-4 my-4 border-top">
+                    <article>&copy; 2024 biomaexplorer. Todos los derechos reservados.</article>
+                    <ul class="list-unstyled d-flex">
+                        <li class="ms-3"><a class="link-light" href="#">Política de privacidad</a></li>
+                        <li class="ms-3"><a class="link-light" href="#">Términos de uso</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </section>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="../js/map.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/modal.js"></script>
+</body>
+
+</html>
